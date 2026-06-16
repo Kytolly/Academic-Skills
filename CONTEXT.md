@@ -76,6 +76,42 @@ _Avoid_: Idea, future work note
 A Research Opportunity backed by paper evidence and phrased so it can become a possible research question, with risks and objections recorded.
 _Avoid_: Speculation, loose future work
 
+**Research Question Workflow**:
+A downstream paper-reading workflow that turns Research Opportunity Candidates from exactly one Field Map Workspace into evidence-backed Candidate Angles and Research Question Cards.
+_Avoid_: Brainstorming, topic generation, generic idea search
+
+**Research Question Card**:
+A decision-ready research question artifact derived from one or more Research Opportunity Candidates, recording the question, supporting evidence, fit to the user's writing intent, feasibility, novelty, risks, and whether further paper discovery is needed.
+_Avoid_: Idea card, question list item, topic note
+
+**Research Question Workspace**:
+A durable artifact set for research-question selection derived from exactly one Field Map Workspace and organized around candidate angles, writing intent, and Research Question Cards.
+_Avoid_: Field map subfolder, brainstorming folder, topic shortlist
+
+**Writing Intent**:
+The user's explicit priority order for choosing research questions, including the main paper-writing goal, secondary goals, and practical constraints that shape how Research Opportunity Candidates are turned into Research Question Cards.
+_Avoid_: Preference, taste, vague goal
+
+**Guided Choice**:
+A narrowing interaction in which the agent offers multiple viable options or a binary tradeoff before asking the user to choose, so research-question selection converges through comparison instead of single-option confirmation.
+_Avoid_: Single recommendation, yes/no confirmation, open-ended preference question
+
+**Candidate Angle**:
+A narrower research cut derived from a Research Opportunity Candidate and shaped by a possible contribution type, such as benchmark, method, system, study, theory, or evaluation protocol.
+_Avoid_: Subtopic, idea variant, direction
+
+**Contribution Type**:
+The primary kind of research contribution a Candidate Angle is expected to make, such as benchmark, evaluation protocol, defense method, system, human study, conceptual model, or empirical measurement.
+_Avoid_: Paper type, format, flavor
+
+**Evidence Sufficiency Check**:
+A gate in the Research Question workflow that decides whether a Candidate Angle has enough paper-backed support to become a Research Question Card, needs targeted evidence collection, or should be deferred.
+_Avoid_: Gut check, confidence score, quick validation
+
+**Supporting Evidence**:
+Additional paper-backed evidence collected during the Research Question workflow to support a Candidate Angle or Research Question Card when the source Field Map Workspace is not sufficient.
+_Avoid_: Proof, justification text, invented support
+
 **Field Map Report**:
 A zero-build static HTML report inside a Field Map Workspace that organizes the boundary, seed set, search strategy, clusters, paper table, opportunities, and next actions for human reading.
 _Avoid_: Web app, dashboard
