@@ -84,6 +84,46 @@ _Avoid_: Brainstorming, topic generation, generic idea search
 A decision-ready research question artifact derived from one or more Research Opportunity Candidates, recording the question, supporting evidence, fit to the user's writing intent, feasibility, novelty, risks, and whether further paper discovery is needed.
 _Avoid_: Idea card, question list item, topic note
 
+**Problem Reality Check**:
+A paper-reading workflow routed to exactly one Research Question Card before interrogation begins, stress-testing whether that card's problem is real, externally grounded, and strong enough to motivate research.
+_Avoid_: General risk review, method critique, reviewer objection list
+
+**Problem Reality Check Report**:
+A durable review artifact attached to one Research Question Card, recording the problem-reality verdict, strongest supporting evidence, weak assumptions, caution points, unsafe motivation claims, and follow-up evidence needs.
+_Avoid_: Risk list, paper summary, informal comments
+
+**Problem Reality Verdict**:
+The controlled final status of a Problem Reality Check Report: `problem-solid`, `needs-evidence`, `motivation-fragile`, or `reject`.
+_Avoid_: Free-form confidence note, numeric score, keep/defer decision
+
+**Unsafe Motivation Claim**:
+A motivation statement that a Problem Reality Check Report warns against because it is overstated, undersupported, contradicted by evidence, too broad, or likely to be attacked during paper review.
+_Avoid_: Limitation, reviewer objection, writing polish note
+
+**Targeted Evidence Need**:
+A focused evidence gap identified by a Problem Reality Check Report, phrased as a recommended next investigation without automatically launching a new paper-search workflow.
+_Avoid_: Full literature review, automatic evidence collection, vague next step
+
+**Problem Reality Check Workspace**:
+A durable artifact set for single-card Problem Reality Checks from exactly one Research Question Workspace, organized around source-card routing, per-card check reports, cross-report comparison, and evidence needs.
+_Avoid_: Research Question Workspace subfolder, comments folder, review notes dump
+
+**Source Card Gate**:
+The required routing step before a Problem Reality Check begins; it is passed only when exactly one source Research Question Card is identified and its key metadata is recorded.
+_Avoid_: Optional card selection, broad question-area review
+
+**Reality Check Dimension**:
+A required interrogation lens inside a Problem Reality Check, covering one aspect of whether the Research Question Card's problem is real, grounded, supported, unsolved, safely motivated, and well-scoped.
+_Avoid_: Loose checklist item, score category, reviewer comment type
+
+**Challenge Question**:
+An attack-style but answerable question inside a Problem Reality Check, pairing a skeptical claim with the hidden assumption being tested, the evidence that would satisfy the challenge, and the recommended answer or likely verdict.
+_Avoid_: Generic checklist prompt, yes/no question, vague concern
+
+**Interrogation Transcript**:
+A durable turn-by-turn record of a Problem Reality Check, capturing each Challenge Question, the agent's provisional recommendation, the user's response or correction, and the resulting dimension verdict before the final report is written.
+_Avoid_: One-shot report, hidden reasoning, informal chat log
+
 **Research Question Workspace**:
 A durable artifact set for research-question selection derived from exactly one Field Map Workspace and organized around candidate angles, writing intent, and Research Question Cards.
 _Avoid_: Field map subfolder, brainstorming folder, topic shortlist
@@ -121,3 +161,7 @@ _Avoid_: Web app, dashboard
 Dev: "Should `field map` just output `research_clusters.md`?"
 
 Domain expert: "No. Use **Field Map Workflow** for the full process. It creates one **Field Map Workspace**, starts with the **Field Boundary**, uses **Seed Papers** to expand the literature set, groups papers into **Research Clusters**, and ends by naming **Research Opportunities**."
+
+Dev: "Should we run a `risk objection` pass on all three question cards?"
+
+Domain expert: "Not for problem motivation. Use a **Problem Reality Check** after the **Source Card Gate** selects exactly one **Research Question Card**. The check asks one **Challenge Question** at a time, records an **Interrogation Transcript**, then writes one **Problem Reality Check Report**, assigns a **Problem Reality Verdict**, flags **Unsafe Motivation Claims**, and records **Targeted Evidence Needs** without launching a new paper search."
