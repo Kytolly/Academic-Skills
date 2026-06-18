@@ -23,19 +23,21 @@
 │   └── SKILL.md
 ├── 05-method-inspiration/
 │   └── SKILL.md
-├── 06-experiment-design/
+├── 06-method-commitment/
 │   └── SKILL.md
-├── 07-baseline-search/
+├── 07-experiment-design/
 │   └── SKILL.md
-├── 08-metric-search/
+├── 08-baseline-search/
 │   └── SKILL.md
-├── 09-citation-support/
+├── 09-metric-search/
 │   └── SKILL.md
-├── 10-positioning-differentiation/
+├── 10-citation-support/
 │   └── SKILL.md
-├── 11-writing-patterns/
+├── 11-positioning-differentiation/
 │   └── SKILL.md
-└── 12-risk-objection/
+├── 12-writing-patterns/
+│   └── SKILL.md
+└── 13-risk-objection/
     └── SKILL.md
 ```
 
@@ -62,13 +64,14 @@
 | 03 | 验证问题是否真实 | 问题依据 / problem justification | 有初步 idea，但担心是伪问题 |
 | 04 | 寻找理论依据 | 理论支柱 | 问题已有，但需要理论地基 |
 | 05 | 寻找方法启发 | 方法候选库 | 问题初步确定，正在设计方法 |
-| 06 | 寻找实验设计 | 实验方案草图 | 方法有雏形，但不知道怎么验证 |
-| 07 | 寻找 baseline | baseline list | 方法基本确定，准备实验或 proposal |
-| 08 | 寻找评价指标 | metric bank | 不知道如何证明 claim |
-| 09 | 寻找论文依据 / 引用支撑 | citation bank | 写 introduction、related work 或 proposal |
-| 10 | 寻找定位和差异化 | positioning matrix | 方法和问题稳定，准备写 related work |
-| 11 | 学习写作套路 | 写作模板 / 表达素材 | 准备写 proposal、paper 或 related work |
-| 12 | 排雷和反驳自己 | risk list / objection list | idea 成型前后，尤其是过于兴奋时 |
+| 06 | 确定方法设计 | committed method design | 方法启发之后，研究者准备认领和稳定自己的方法 |
+| 07 | 寻找实验设计 | 实验方案草图 | 方法有雏形，但不知道怎么验证 |
+| 08 | 寻找 baseline | baseline list | 方法基本确定，准备实验或 proposal |
+| 09 | 寻找评价指标 | metric bank | 不知道如何证明 claim |
+| 10 | 寻找论文依据 / 引用支撑 | citation bank | 写 introduction、related work 或 proposal |
+| 11 | 寻找定位和差异化 | positioning matrix | 方法和问题稳定，准备写 related work |
+| 12 | 学习写作套路 | 写作模板 / 表达素材 | 准备写 proposal、paper 或 related work |
+| 13 | 排雷和反驳自己 | risk list / objection list | idea 成型前后，尤其是过于兴奋时 |
 
 ## 核心使用场景
 
@@ -115,4 +118,3 @@
 这里的产品设计是先从研究问题本身出发，找出哪些判断真的需要理论支持。比如，是要解释某种失败为什么会发生，还是要说明某类行为为什么会影响信任、决策或长期效果。只有先确定这些需要支撑的判断，再去寻找合适的理论传统，理论才不会变成泛泛的背景知识。
 
 这样做的优势是，理论最终服务于论文论证。用户得到的不是一串理论名字，而是更清楚的问题 framing：哪些 claim 有理论支柱，哪些 claim 只能谨慎表述，哪些经验问题不能靠理论替代证据。它适合写 proposal、introduction、theoretical framing，也适合在一个偏经验的问题需要提升概念深度时使用。
-

@@ -160,6 +160,106 @@ _Avoid_: Theory summary, related work section, citation list
 The required confirmation step before writing a Theoretical Grounding Report; it is passed only when the user confirms, revises, or explicitly delegates the 2-4 Selected Theoretical Traditions and their rationale.
 _Avoid_: Automatic theory choice, hidden selection, final theory list
 
+**Method Inspiration Source Gate**:
+The required routing step before a Method Inspiration Workflow begins; it is passed only when exactly one Research Question Card or one Source Problem Brief is identified, with the evidence status and reason for method search recorded.
+_Avoid_: Source Problem Gate, loose problem note, implicit method-starting context
+
+**Source Problem Brief**:
+A user-provided problem record that can provisionally start Method Inspiration when no Research Question Card is available, naming the target problem, failure scenario, intended intervention point, constraints, non-goals, and evidence status.
+_Avoid_: Rough idea, topic note, method prompt
+
+**Method Inspiration Workflow**:
+A downstream paper-reading workflow that turns one Research Question Card or Source Problem Brief into a Method Candidate Library through method-need decomposition, targeted method search, pattern extraction, transfer mapping, and candidate-method assembly.
+_Avoid_: Method brainstorm, architecture design, related-work scan
+
+**Method Inspiration Boundary**:
+The boundary that Method Inspiration stops at auditable Candidate Methods and must not ask the user to immediately commit to a paper's actual core method; the human researcher owns the later jump from inspiration to a Committed Method Design.
+_Avoid_: Agent-generated final method, automatic novelty creation, complete method design, quick commitment prompt
+
+**Method Commitment Workflow**:
+A reserved downstream workflow for turning method inspiration and the researcher's own judgment into a human-owned Committed Method Design; it is intentionally separate from Method Inspiration and is not yet specified.
+_Avoid_: Method Inspiration final step, quick synthesis prompt, agent-owned method invention
+
+**Method Inspiration Workspace**:
+A durable artifact set for method inspiration from exactly one field context, organized around source-problem routing, per-problem inspiration folders, Method Needs, Method Patterns, Transfer Mappings, Candidate Methods, and Method Candidate Libraries.
+_Avoid_: Method notes folder, architecture folder, paper dump
+
+**Method Need**:
+A problem-derived functional requirement for a method, naming the target failure, intervention point, required capability, expected inputs and outputs, constraints, success signal, and evidence status.
+_Avoid_: Model module, feature idea, implementation component
+
+**Method Need Decomposition**:
+A durable artifact in a Method Inspiration Workflow that turns the source Research Question Card or Source Problem Brief into Method Needs before method papers are searched.
+_Avoid_: Architecture plan, module list, generic requirements document
+
+**Method Needs Confirmation Gate**:
+The required confirmation step after Method Need Decomposition; it is passed only when the user confirms, revises, or explicitly delegates the Method Needs before Targeted Method Search proceeds.
+_Avoid_: Hidden requirement inference, automatic method search, informal needs check
+
+**Targeted Method Search**:
+A narrow paper-search step inside a Method Inspiration Workflow that looks for method ideas for specific Method Needs across Same-Problem Papers, Adjacent-Problem Papers, and Far-Analogy Papers.
+_Avoid_: Method Paper Search, broad related work search, baseline search
+
+**Method Search Sufficiency Check**:
+A coverage-based check in a Method Inspiration Workflow that decides whether each core Method Need has enough Same-Problem, Adjacent-Problem, and Far-Analogy evidence to extract Method Patterns and move toward assembly, or should remain marked as `needs-search`.
+_Avoid_: Fixed paper-count target, exhaustive search, arbitrary stopping point
+
+**Same-Problem Paper**:
+A method-search candidate that directly addresses the same or highly similar problem as the source Research Question Card or Source Problem Brief.
+_Avoid_: Baseline by default, any paper from the same field
+
+**Adjacent-Problem Paper**:
+A method-search candidate whose problem differs from the source problem but whose mechanism, failure mode, or required capability matches one or more Method Needs.
+_Avoid_: Same-topic paper, loosely related paper
+
+**Far-Analogy Paper**:
+A method-search candidate from a more distant field whose method structure can transfer to one or more Method Needs despite substantial domain or task differences.
+_Avoid_: Inspirational citation, random analogy, metaphor
+
+**Method Pattern**:
+A reusable method design pattern extracted from a paper, tied to a source URL, source paper type, matched Method Need, original setting, core mechanism, Transferable Unit, assumptions, inputs and outputs, integration cost, transfer risk, and evidence strength.
+_Avoid_: Paper summary, full method copy, implementation recipe
+
+**Transferable Unit**:
+The smallest reusable design element inside a Method Pattern, such as a module, objective, training flow, inference flow, data construction step, filter, router, memory update, critic, or controller.
+_Avoid_: Whole architecture, inspiration, vague lesson
+
+**Transfer Mapping**:
+A durable artifact in a Method Inspiration Workflow that decides how Method Patterns transfer into the source problem by recording Need-Pattern Fit before assigning any Assembly Role.
+_Avoid_: Direct architecture design, analogy note, method mashup
+
+**Need-Pattern Fit**:
+The fit judgment between one Method Pattern and one Method Need, naming the matched capability, mismatch, required adaptation, transfer boundary, and whether the pattern is eligible for candidate-method assembly.
+_Avoid_: Similarity score, relevance note, citation match
+
+**Assembly Role**:
+The role a Method Pattern may play inside a candidate method after Need-Pattern Fit is established, such as input processor, retriever, planner, memory manager, critic, training objective, data generator, evaluation proxy, or controller.
+_Avoid_: Model component by default, paper label, arbitrary module name
+
+**Candidate Method Assembly**:
+A workflow step that combines eligible Method Patterns into 3-5 comparable Candidate Methods, making coverage, roles, flows, novelty hypotheses, weak links, feasibility, and experiment implications explicit.
+_Avoid_: Single best method, architecture drafting, method brainstorming
+
+**Candidate Method**:
+A possible method design assembled from Method Patterns, recording its method thesis, covered and uncovered Method Needs, Assembly Roles, inputs, modules, outputs, training or inference flow, source papers, novelty hypothesis, weakest link, feasibility, experiment implications, and status.
+_Avoid_: Final method, implementation plan, idea sketch
+
+**Committed Method Design**:
+A human-owned method design that the researcher has chosen or authored after method inspiration, stable enough to serve as the source method for experiment design, baseline search, metric search, positioning, or risk-objection workflows.
+_Avoid_: Candidate Method, agent-generated method, real method
+
+**Method Candidate Library**:
+The final artifact of a Method Inspiration Workflow, containing several Candidate Methods plus the selected, deferred, and rejected Method Patterns, transfer judgments, source URLs, risks, disposition reasons, and evidence statuses needed to compare and later revise them.
+_Avoid_: Method summary, chosen architecture, paper list
+
+**Method Pattern Disposition**:
+The recorded outcome for a Method Pattern after Transfer Mapping, such as selected for assembly, deferred, or rejected, with reasons such as mismatch, too-strong assumptions, high integration cost, weak evidence, or excessive similarity to a baseline.
+_Avoid_: Hidden discard, gut-feel filtering, unexplained exclusion
+
+**Candidate Method Selection Gate**:
+The required confirmation step before finalizing the Method Candidate Library; it is passed only when the user confirms, revises, replaces, or explicitly delegates the 3-5 Candidate Methods and their assembly rationales.
+_Avoid_: Automatic final method choice, unconfirmed architecture, single winner, choosing a Committed Method Design
+
 **Problem Reality Check Workspace**:
 A durable artifact set for single-card Problem Reality Checks from exactly one Research Question Workspace, organized around source-card routing, per-card check reports, cross-report comparison, and evidence needs.
 _Avoid_: Research Question Workspace subfolder, comments folder, review notes dump
@@ -225,3 +325,11 @@ Domain expert: "Not for problem motivation. Use a **Problem Reality Check** afte
 Dev: "Can the theoretical grounding skill just list provenance theory, trust theory, and governance theory?"
 
 Domain expert: "No. Use a **Theoretical Grounding Workflow** only after the **Theoretical Grounding Source Gate** finds one checked card and its completed **Problem Reality Check Report**. First write a **Problem-Theory Decomposition**, confirm the **Theory-Support Claims**, extract **Theory Hooks**, run **Targeted Theory Search**, then keep only **Selected Theoretical Traditions** that support claim-centered **Theoretical Pillars** in the final **Theoretical Grounding Report**. If sources are still thin after search, record a **Theory Evidence Need** instead of pretending the theory support is final."
+
+Dev: "Can method inspiration start from a rough problem?"
+
+Domain expert: "Yes, but call the routing step the **Method Inspiration Source Gate**. Prefer one **Research Question Card** as the source; if the user only has a rough problem, write a **Source Problem Brief** and mark downstream method candidates as provisional until the problem has been checked."
+
+Dev: "Should method inspiration end by asking the user to choose the final method?"
+
+Domain expert: "No. Respect the **Method Inspiration Boundary**: 05 ends with a **Method Candidate Library**, not a **Committed Method Design**. The later **Method Commitment Workflow** is reserved for the human researcher to turn inspiration into an owned method design."
