@@ -9,11 +9,20 @@ Use this skill to run a complete Field Map Workflow: define the field boundary, 
 
 The goal is not to fully summarize every paper. The goal is to build a durable map of the field: what problems exist, what method routes exist, which assumptions they rely on, how they are evaluated, where papers agree or conflict, and what gaps remain.
 
+## Output Root
+
+Set `{workspace-root}` before creating, scanning, or updating artifacts:
+
+- Default `{workspace-root}` to `workspace` (the repo-local `workspace/` directory).
+- If the user specifies a workspace root, use that path exactly and do not add another `workspace/` layer.
+- If the user provides an existing artifact or workflow path, infer `{workspace-root}` from that path and keep related artifacts under the same root.
+- Do not create new generated workflow directories directly at the repository root. If the user points to an existing root-level legacy workspace, inspect or update only that existing path.
+
 ## Core Workflow
 
 1. Draft a Proposed Field Boundary from the user's initial direction.
 2. Revise the boundary with the user until they explicitly confirm it.
-3. Create a Field Map Workspace at `field-maps/{field-slug}/`.
+3. Create a Field Map Workspace at `{workspace-root}/field-maps/{field-slug}/`.
 4. Write `field_boundary.md`.
 5. Discover an 8-12 paper Seed Set and ask the user to confirm it.
 6. After confirmation, create one Paper Position Record per seed paper in `seed_papers/`.

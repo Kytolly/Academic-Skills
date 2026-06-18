@@ -2,9 +2,9 @@
 
 Status: Draft / Confirmed
 
-Research Question Workspace: `research-questions/{field-slug}/`
+Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Field Map Workspace: `field-maps/{field-slug}/`
+Source Field Map Workspace: `{workspace-root}/field-maps/{field-slug}/`
 
 Writing Intent: `writing_intent.md`
 

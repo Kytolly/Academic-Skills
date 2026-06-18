@@ -2,7 +2,7 @@
 
 Status: Draft / Complete
 
-Research Question Workspace: `research-questions/{field-slug}/`
+Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
 Related Candidate Angle: `../candidate_angles.md#{anchor}`
 
@@ -46,7 +46,7 @@ Which evidence roles were missing?
 ## Evidence Points
 
 - [Paper or source](resource-or-relative-path): What this supports.
-- [Field Map paper record](../../../field-maps/{field-slug}/all_papers/example.md): What this supports.
+- [Field Map paper record]({workspace-root}/field-maps/{field-slug}/all_papers/example.md): What this supports.
 
 ## What This Changes
 

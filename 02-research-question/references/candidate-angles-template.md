@@ -2,9 +2,9 @@
 
 Status: Draft / Confirmed
 
-Research Question Workspace: `research-questions/{field-slug}/`
+Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Field Map Workspace: `field-maps/{field-slug}/`
+Source Field Map Workspace: `{workspace-root}/field-maps/{field-slug}/`
 
 Writing Intent: `writing_intent.md`
 
@@ -38,7 +38,7 @@ Status: Proposed / Selected / Deferred
 ### Source Research Opportunity Candidate
 
 - {Opportunity title}
-- Source: `field-maps/{field-slug}/research_opportunities.md`
+- Source: `{workspace-root}/field-maps/{field-slug}/research_opportunities.md`
 
 ### Contribution Type
 
@@ -62,8 +62,8 @@ What benchmark, method, system, study, theory, measurement, or evaluation could 
 
 ### Evidence Signals
 
-- [Paper or artifact](../../field-maps/{field-slug}/seed_papers/example.md): Evidence signal
-- [Paper or artifact](../../field-maps/{field-slug}/all_papers/example.md): Evidence signal
+- [Paper or artifact]({workspace-root}/field-maps/{field-slug}/seed_papers/example.md): Evidence signal
+- [Paper or artifact]({workspace-root}/field-maps/{field-slug}/all_papers/example.md): Evidence signal
 
 ### Evidence Sufficiency Starting Point
 

@@ -9,11 +9,20 @@ Use this skill to run a Research Question Workflow: select a source Field Map Wo
 
 This skill does not start from generic brainstorming. It starts from one Field Map Workspace and carries its Research Opportunity Candidates forward into decision-ready research questions.
 
+## Output Root
+
+Set `{workspace-root}` before creating, scanning, or updating artifacts:
+
+- Default `{workspace-root}` to `workspace` (the repo-local `workspace/` directory).
+- If the user specifies a workspace root, use that path exactly and do not add another `workspace/` layer.
+- If the user provides an existing artifact or workflow path, infer `{workspace-root}` from that path and keep related artifacts under the same root.
+- Do not create new generated workflow directories directly at the repository root. If the user points to an existing root-level legacy workspace, inspect or update only that existing path.
+
 ## Core Workflow
 
 1. Locate the source Field Map Workspace.
 2. Pass the Source Field Map Gate.
-3. Create or resume a Research Question Workspace at `research-questions/{field-slug}/`.
+3. Create or resume a Research Question Workspace at `{workspace-root}/research-questions/{field-slug}/`.
 4. Write `source_field_map.md`.
 5. Use Guided Choice to pass the Writing Intent Gate and write `writing_intent.md`.
 6. Read `research_opportunities.md`, `research_clusters.md`, and relevant Paper Position Records.
@@ -31,7 +40,7 @@ If a Research Question Workspace already exists, read its current artifacts befo
 
 The Research Question Workflow must be derived from exactly one Field Map Workspace.
 
-If the user provides a slug or path, inspect that workspace. If the user does not provide one, scan `field-maps/` for complete workspaces.
+If the user provides a slug or path, inspect that workspace. If the user does not provide one, scan `{workspace-root}/field-maps/` for complete workspaces.
 
 A Field Map Workspace is complete enough for this workflow only when it contains:
 
@@ -54,7 +63,7 @@ Record the source workspace and completeness check in `source_field_map.md` usin
 Create durable artifacts at:
 
 ```text
-research-questions/{field-slug}/
+{workspace-root}/research-questions/{field-slug}/
 ```
 
 Use this structure:
@@ -201,7 +210,7 @@ Decision outcomes:
 If evidence is insufficient but the Candidate Angle is promising, collect Supporting Evidence under:
 
 ```text
-research-questions/{field-slug}/evidence/
+{workspace-root}/research-questions/{field-slug}/evidence/
 ```
 
 Use `references/supporting-evidence-template.md`.
@@ -219,7 +228,7 @@ Each Research Question Card must cite evidence. Do not make core claims without 
 Use `references/research-question-card-template.md` for each card in:
 
 ```text
-research-questions/{field-slug}/cards/{question-slug}.md
+{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md
 ```
 
 Each card must include:

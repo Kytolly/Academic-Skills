@@ -2,7 +2,7 @@
 
 Status: Draft / Confirmed
 
-Theoretical Grounding Workspace: `theoretical-groundings/{field-slug}/`
+Theoretical Grounding Workspace: `{workspace-root}/theoretical-groundings/{field-slug}/`
 
 Grounding Folder: `groundings/{question-slug}/`
 

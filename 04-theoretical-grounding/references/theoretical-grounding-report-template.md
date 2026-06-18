@@ -2,13 +2,13 @@
 
 Status: Final / Provisional
 
-Theoretical Grounding Workspace: `theoretical-groundings/{field-slug}/`
+Theoretical Grounding Workspace: `{workspace-root}/theoretical-groundings/{field-slug}/`
 
 Grounding Folder: `groundings/{question-slug}/`
 
-Source Research Question Card: `research-questions/{field-slug}/cards/{question-slug}.md`
+Source Research Question Card: `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md`
 
-Source Problem Reality Check Report: `research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md`
+Source Problem Reality Check Report: `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md`
 
 Problem Reality Verdict: problem-solid / needs-evidence / motivation-fragile / reject
 

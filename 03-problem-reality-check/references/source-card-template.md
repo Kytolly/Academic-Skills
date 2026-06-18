@@ -2,13 +2,13 @@
 
 Status: Pending / Confirmed
 
-Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
 Check Folder: `checks/{question-slug}/`
 
-Source Research Question Workspace: `research-questions/{field-slug}/`
+Source Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Research Question Card: `research-questions/{field-slug}/cards/{question-slug}.md`
+Source Research Question Card: `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md`
 
 ## Source Card Gate
 
@@ -28,7 +28,7 @@ Reason this card is being checked now:
 | Card Decision | keep / needs more evidence / defer | `cards/{question-slug}.md` |
 | Evidence Sufficiency | Sufficient / Needs more evidence / Thin | `cards/{question-slug}.md` |
 | Source Candidate Angle | {Angle title} | `candidate_angles.md` |
-| Source Research Opportunity Candidate | {Opportunity title} | `field-maps/{field-slug}/research_opportunities.md` |
+| Source Research Opportunity Candidate | {Opportunity title} | `{workspace-root}/field-maps/{field-slug}/research_opportunities.md` |
 
 ## Linked Evidence Paths
 
@@ -40,11 +40,11 @@ Reason this card is being checked now:
 
 | Artifact | Path | Found? | Why It Matters |
 | --- | --- | --- | --- |
-| Research Question Summary | `research-questions/{field-slug}/research_question_cards.md` | Yes / No | Card status and cross-card context |
-| Candidate Angles | `research-questions/{field-slug}/candidate_angles.md` | Yes / No | Source angle and original risks |
-| Writing Intent | `research-questions/{field-slug}/writing_intent.md` | Yes / No | Motivation fit and target framing |
-| Research Opportunities | `field-maps/{field-slug}/research_opportunities.md` | Yes / No | Source problem gap |
-| Research Clusters | `field-maps/{field-slug}/research_clusters.md` | Yes / No | Field-level grounding |
+| Research Question Summary | `{workspace-root}/research-questions/{field-slug}/research_question_cards.md` | Yes / No | Card status and cross-card context |
+| Candidate Angles | `{workspace-root}/research-questions/{field-slug}/candidate_angles.md` | Yes / No | Source angle and original risks |
+| Writing Intent | `{workspace-root}/research-questions/{field-slug}/writing_intent.md` | Yes / No | Motivation fit and target framing |
+| Research Opportunities | `{workspace-root}/field-maps/{field-slug}/research_opportunities.md` | Yes / No | Source problem gap |
+| Research Clusters | `{workspace-root}/field-maps/{field-slug}/research_clusters.md` | Yes / No | Field-level grounding |
 
 ## Routing Decision
 

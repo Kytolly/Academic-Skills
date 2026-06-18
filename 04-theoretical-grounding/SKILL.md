@@ -9,14 +9,23 @@ Use this skill to run a Theoretical Grounding Workflow: route to exactly one Res
 
 This skill does not decorate a research question with famous theories. It identifies which precise claims need theoretical support and which theoretical traditions can safely support those claims.
 
+## Output Root
+
+Set `{workspace-root}` before creating, scanning, or updating artifacts:
+
+- Default `{workspace-root}` to `workspace` (the repo-local `workspace/` directory).
+- If the user specifies a workspace root, use that path exactly and do not add another `workspace/` layer.
+- If the user provides an existing artifact or workflow path, infer `{workspace-root}` from that path and keep related artifacts under the same root.
+- Do not create new generated workflow directories directly at the repository root. If the user points to an existing root-level legacy workspace, inspect or update only that existing path.
+
 ## Core Workflow
 
 1. Locate the source Research Question Workspace.
 2. Locate the source Problem Reality Check Workspace.
 3. Pass the Theoretical Grounding Source Gate by identifying exactly one Research Question Card and its completed Problem Reality Check Report.
-4. Create or resume a Theoretical Grounding Workspace at `theoretical-groundings/{field-slug}/`.
+4. Create or resume a Theoretical Grounding Workspace at `{workspace-root}/theoretical-groundings/{field-slug}/`.
 5. Write or update `source_research_question_checks.md`.
-6. Create a per-card grounding folder at `theoretical-groundings/{field-slug}/groundings/{question-slug}/`.
+6. Create a per-card grounding folder at `{workspace-root}/theoretical-groundings/{field-slug}/groundings/{question-slug}/`.
 7. Write `groundings/{question-slug}/source_problem.md`.
 8. Read the source card, the Problem Reality Check Report, and relevant local context.
 9. Draft `groundings/{question-slug}/problem_theory_decomposition.md`.
@@ -37,7 +46,7 @@ If a Theoretical Grounding Workspace already exists, read its current artifacts 
 
 The workflow must be routed to exactly one Research Question Card and its completed Problem Reality Check Report.
 
-If the user provides a card path, inspect it directly and find the corresponding Problem Reality Check Report. If the user provides a field slug, inspect `research-questions/{field-slug}/cards/` and `research-question-checks/{field-slug}/checks/`. If the user does not provide a card, scan `research-question-checks/` for completed check reports and list candidate cards.
+If the user provides a card path, inspect it directly and find the corresponding Problem Reality Check Report. If the user provides a field slug, inspect `{workspace-root}/research-questions/{field-slug}/cards/` and `{workspace-root}/research-question-checks/{field-slug}/checks/`. If the user does not provide a card, scan `{workspace-root}/research-question-checks/` for completed check reports and list candidate cards.
 
 The Theoretical Grounding Source Gate is passed only when all of the following are recorded:
 
@@ -81,7 +90,7 @@ The final report must preserve unresolved fragilities from the Problem Reality C
 Create durable artifacts at:
 
 ```text
-theoretical-groundings/{field-slug}/
+{workspace-root}/theoretical-groundings/{field-slug}/
 ```
 
 Use this structure:

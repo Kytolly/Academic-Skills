@@ -3,13 +3,13 @@
 A Research Question Workspace is derived from exactly one Field Map Workspace and lives at:
 
 ```text
-research-questions/{field-slug}/
+{workspace-root}/research-questions/{field-slug}/
 ```
 
 ## Required Structure
 
 ```text
-research-questions/{field-slug}/
+{workspace-root}/research-questions/{field-slug}/
 |-- source_field_map.md
 |-- writing_intent.md
 |-- candidate_angles.md

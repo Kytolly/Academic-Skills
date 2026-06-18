@@ -7,6 +7,10 @@ description: Use when the user wants to attack their own idea by finding prior w
 
 Status: placeholder.
 
+## Output Root
+
+When writing durable artifacts, set `{workspace-root}` first. Default it to `workspace` (the repo-local `workspace/` directory), or use the user's specified workspace root exactly. Do not create generated content directly at the repository root.
+
 Use this skill for the motivation: 排雷和反驳自己.
 
 Expected output: risk list / objection list.

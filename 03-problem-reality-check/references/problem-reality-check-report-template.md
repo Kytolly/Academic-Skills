@@ -2,11 +2,11 @@
 
 Problem Reality Verdict: problem-solid / needs-evidence / motivation-fragile / reject
 
-Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
-Source Research Question Workspace: `research-questions/{field-slug}/`
+Source Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Card: `../../research-questions/{field-slug}/cards/{question-slug}.md`
+Source Card: `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md`
 
 Source Card Gate: `source_card.md`
 

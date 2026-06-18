@@ -3,13 +3,13 @@
 A Theoretical Grounding Workspace is derived from exactly one Research Question Workspace and reads from completed Problem Reality Check Reports. It lives at:
 
 ```text
-theoretical-groundings/{field-slug}/
+{workspace-root}/theoretical-groundings/{field-slug}/
 ```
 
 ## Required Structure
 
 ```text
-theoretical-groundings/{field-slug}/
+{workspace-root}/theoretical-groundings/{field-slug}/
 |-- source_research_question_checks.md
 |-- groundings/
 |   `-- {question-slug}/

@@ -2,7 +2,7 @@
 
 Status: Draft / Confirmed
 
-Theoretical Grounding Workspace: `theoretical-groundings/{field-slug}/`
+Theoretical Grounding Workspace: `{workspace-root}/theoretical-groundings/{field-slug}/`
 
 Grounding Folder: `groundings/{question-slug}/`
 
@@ -12,9 +12,9 @@ Source Problem: `source_problem.md`
 
 | Source | Path | Used For |
 | --- | --- | --- |
-| Research Question Card | `research-questions/{field-slug}/cards/{question-slug}.md` | Research question, core claim, possible study |
-| Problem Reality Check Report | `research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Verdict, fragilities, unsafe claims |
-| Interrogation Transcript | `research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` | User-confirmed judgments |
+| Research Question Card | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` | Research question, core claim, possible study |
+| Problem Reality Check Report | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Verdict, fragilities, unsafe claims |
+| Interrogation Transcript | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` | User-confirmed judgments |
 | Local Evidence | `{relative/path.md}` | {Evidence role} |
 
 ## Phenomenon

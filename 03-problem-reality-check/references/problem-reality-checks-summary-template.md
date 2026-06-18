@@ -2,17 +2,17 @@
 
 Status: Draft / Confirmed
 
-Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
-Source Research Question Workspace: `research-questions/{field-slug}/`
+Source Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
 ## Source Workspace
 
 | Artifact | Path | Notes |
 | --- | --- | --- |
-| Research Question Workspace | `research-questions/{field-slug}/` |  |
-| Research Question Cards Summary | `research-questions/{field-slug}/research_question_cards.md` |  |
-| Source Field Map Workspace | `field-maps/{field-slug}/` |  |
+| Research Question Workspace | `{workspace-root}/research-questions/{field-slug}/` |  |
+| Research Question Cards Summary | `{workspace-root}/research-questions/{field-slug}/research_question_cards.md` |  |
+| Source Field Map Workspace | `{workspace-root}/field-maps/{field-slug}/` |  |
 
 ## Available Research Question Cards
 
@@ -20,7 +20,7 @@ Use this section to record cards discovered for routing. Checking multiple cards
 
 | Card | Path | Current Card Decision | Evidence Sufficiency | Interrogation Complete? | Check Report |
 | --- | --- | --- | --- | --- | --- |
-| {Short Name} | `research-questions/{field-slug}/cards/{question-slug}.md` | keep / needs more evidence / defer | Sufficient / Needs more evidence / Thin | Yes / No | `checks/{question-slug}/problem_reality_check.md` |
+| {Short Name} | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` | keep / needs more evidence / defer | Sufficient / Needs more evidence / Thin | Yes / No | `checks/{question-slug}/problem_reality_check.md` |
 
 ## Completed Checks
 

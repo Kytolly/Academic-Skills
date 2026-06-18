@@ -2,7 +2,7 @@
 
 Status: Confirmed
 
-Workspace: `field-maps/{field-slug}/`
+Workspace: `{workspace-root}/field-maps/{field-slug}/`
 
 ## Research Target
 

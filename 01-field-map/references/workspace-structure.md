@@ -3,7 +3,7 @@
 Create one workspace per research direction:
 
 ```text
-field-maps/{field-slug}/
+{workspace-root}/field-maps/{field-slug}/
 ├── field_boundary.md
 ├── seed_papers/
 ├── search_strategy.md

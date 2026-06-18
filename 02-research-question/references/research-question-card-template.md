@@ -2,7 +2,7 @@
 
 Decision: keep / needs more evidence / defer
 
-Research Question Workspace: `research-questions/{field-slug}/`
+Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
 ## Research Question
 
@@ -20,7 +20,7 @@ Research Question Workspace: `research-questions/{field-slug}/`
 ## Source Research Opportunity Candidate
 
 - Opportunity: {Opportunity title}
-- Source: `../../../field-maps/{field-slug}/research_opportunities.md`
+- Source: `{workspace-root}/field-maps/{field-slug}/research_opportunities.md`
 
 ## Contribution Type
 
@@ -52,8 +52,8 @@ Tradeoffs:
 
 Every core claim in this card must be backed by at least one linked evidence item.
 
-- [Paper record](../../../field-maps/{field-slug}/seed_papers/example.md): What this supports.
-- [Paper record](../../../field-maps/{field-slug}/all_papers/example.md): What this supports.
+- [Paper record]({workspace-root}/field-maps/{field-slug}/seed_papers/example.md): What this supports.
+- [Paper record]({workspace-root}/field-maps/{field-slug}/all_papers/example.md): What this supports.
 - [Supporting Evidence](../evidence/example.md): What this supports.
 
 ## Unresolved Gap

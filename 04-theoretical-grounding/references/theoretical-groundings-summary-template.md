@@ -2,19 +2,19 @@
 
 Status: Draft / Confirmed
 
-Theoretical Grounding Workspace: `theoretical-groundings/{field-slug}/`
+Theoretical Grounding Workspace: `{workspace-root}/theoretical-groundings/{field-slug}/`
 
-Source Research Question Workspace: `research-questions/{field-slug}/`
+Source Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Source Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
 ## Source Workspaces
 
 | Artifact | Path | Notes |
 | --- | --- | --- |
-| Research Question Workspace | `research-questions/{field-slug}/` |  |
-| Problem Reality Check Workspace | `research-question-checks/{field-slug}/` |  |
-| Source Field Map Workspace | `field-maps/{field-slug}/` |  |
+| Research Question Workspace | `{workspace-root}/research-questions/{field-slug}/` |  |
+| Problem Reality Check Workspace | `{workspace-root}/research-question-checks/{field-slug}/` |  |
+| Source Field Map Workspace | `{workspace-root}/field-maps/{field-slug}/` |  |
 
 ## Available Checked Research Question Cards
 
@@ -22,7 +22,7 @@ Use this section to record checked cards discovered for routing. Grounding multi
 
 | Card | Research Question Card | Problem Reality Verdict | Check Report | Grounding Status | Grounding Report |
 | --- | --- | --- | --- | --- | --- |
-| {Short Name} | `research-questions/{field-slug}/cards/{question-slug}.md` | problem-solid / needs-evidence / motivation-fragile / reject | `research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Not started / Draft / Final / Provisional / Blocked | `groundings/{question-slug}/theoretical_grounding.md` |
+| {Short Name} | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` | problem-solid / needs-evidence / motivation-fragile / reject | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Not started / Draft / Final / Provisional / Blocked | `groundings/{question-slug}/theoretical_grounding.md` |
 
 ## Completed Groundings
 

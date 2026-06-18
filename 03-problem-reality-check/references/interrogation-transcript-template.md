@@ -2,11 +2,11 @@
 
 Status: In Progress / Complete
 
-Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
 Check Folder: `checks/{question-slug}/`
 
-Source Card: `../../research-questions/{field-slug}/cards/{question-slug}.md`
+Source Card: `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md`
 
 Source Card Gate: `source_card.md`
 

@@ -7,6 +7,10 @@ description: Use when the user reads papers to learn writing moves, motivation f
 
 Status: placeholder.
 
+## Output Root
+
+When writing durable artifacts, set `{workspace-root}` first. Default it to `workspace` (the repo-local `workspace/` directory), or use the user's specified workspace root exactly. Do not create generated content directly at the repository root.
+
 Use this skill for the motivation: 学习写作套路.
 
 Expected output: 写作模板 / 表达素材.

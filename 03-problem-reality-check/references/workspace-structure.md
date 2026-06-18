@@ -3,13 +3,13 @@
 A Problem Reality Check Workspace is derived from exactly one Research Question Workspace and lives at:
 
 ```text
-research-question-checks/{field-slug}/
+{workspace-root}/research-question-checks/{field-slug}/
 ```
 
 ## Required Structure
 
 ```text
-research-question-checks/{field-slug}/
+{workspace-root}/research-question-checks/{field-slug}/
 |-- source_research_questions.md
 |-- checks/
 |   `-- {question-slug}/

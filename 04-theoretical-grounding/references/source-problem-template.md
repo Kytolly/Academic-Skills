@@ -2,13 +2,13 @@
 
 Status: Pending / Confirmed / Blocked
 
-Theoretical Grounding Workspace: `theoretical-groundings/{field-slug}/`
+Theoretical Grounding Workspace: `{workspace-root}/theoretical-groundings/{field-slug}/`
 
 Grounding Folder: `groundings/{question-slug}/`
 
-Source Research Question Workspace: `research-questions/{field-slug}/`
+Source Research Question Workspace: `{workspace-root}/research-questions/{field-slug}/`
 
-Source Problem Reality Check Workspace: `research-question-checks/{field-slug}/`
+Source Problem Reality Check Workspace: `{workspace-root}/research-question-checks/{field-slug}/`
 
 ## Theoretical Grounding Source Gate
 
@@ -22,23 +22,23 @@ Reason this problem is being theoretically grounded now:
 
 | Field | Value | Source |
 | --- | --- | --- |
-| Short Name | {Short name} | `research-questions/{field-slug}/cards/{question-slug}.md` |
-| Research Question | {Question} | `research-questions/{field-slug}/cards/{question-slug}.md` |
-| Contribution Type | {Type} | `research-questions/{field-slug}/cards/{question-slug}.md` |
-| Card Decision | keep / needs more evidence / defer | `research-questions/{field-slug}/cards/{question-slug}.md` |
-| Evidence Sufficiency | Sufficient / Needs more evidence / Thin | `research-questions/{field-slug}/cards/{question-slug}.md` |
-| Source Candidate Angle | {Angle title} | `research-questions/{field-slug}/candidate_angles.md` |
-| Source Research Opportunity Candidate | {Opportunity title} | `field-maps/{field-slug}/research_opportunities.md` |
+| Short Name | {Short name} | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` |
+| Research Question | {Question} | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` |
+| Contribution Type | {Type} | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` |
+| Card Decision | keep / needs more evidence / defer | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` |
+| Evidence Sufficiency | Sufficient / Needs more evidence / Thin | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` |
+| Source Candidate Angle | {Angle title} | `{workspace-root}/research-questions/{field-slug}/candidate_angles.md` |
+| Source Research Opportunity Candidate | {Opportunity title} | `{workspace-root}/field-maps/{field-slug}/research_opportunities.md` |
 
 ## Source Problem Reality Check
 
 | Field | Value | Source |
 | --- | --- | --- |
-| Check Folder | `research-question-checks/{field-slug}/checks/{question-slug}/` |  |
-| Problem Reality Check Report | `research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` |  |
+| Check Folder | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/` |  |
+| Problem Reality Check Report | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` |  |
 | Problem Reality Verdict | problem-solid / needs-evidence / motivation-fragile / reject | `problem_reality_check.md` |
 | Report Complete? | Yes / No | `problem_reality_check.md` |
-| Interrogation Transcript | `research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` |  |
+| Interrogation Transcript | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` |  |
 
 ## Problem Claim Being Grounded
 
@@ -60,14 +60,14 @@ Reason this problem is being theoretically grounded now:
 
 | Artifact | Path | Found? | Why It Matters |
 | --- | --- | --- | --- |
-| Research Question Card | `research-questions/{field-slug}/cards/{question-slug}.md` | Yes / No | Source question and claims |
-| Problem Reality Check Report | `research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Yes / No | Verdict, fragilities, unsafe claims |
-| Interrogation Transcript | `research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` | Yes / No | User-confirmed judgments |
-| Research Question Summary | `research-questions/{field-slug}/research_question_cards.md` | Yes / No | Cross-card context |
-| Candidate Angles | `research-questions/{field-slug}/candidate_angles.md` | Yes / No | Source angle and risks |
-| Writing Intent | `research-questions/{field-slug}/writing_intent.md` | Yes / No | Target framing and constraints |
-| Research Opportunities | `field-maps/{field-slug}/research_opportunities.md` | Yes / No | Source gap |
-| Research Clusters | `field-maps/{field-slug}/research_clusters.md` | Yes / No | Field-level context |
+| Research Question Card | `{workspace-root}/research-questions/{field-slug}/cards/{question-slug}.md` | Yes / No | Source question and claims |
+| Problem Reality Check Report | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/problem_reality_check.md` | Yes / No | Verdict, fragilities, unsafe claims |
+| Interrogation Transcript | `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/interrogation_transcript.md` | Yes / No | User-confirmed judgments |
+| Research Question Summary | `{workspace-root}/research-questions/{field-slug}/research_question_cards.md` | Yes / No | Cross-card context |
+| Candidate Angles | `{workspace-root}/research-questions/{field-slug}/candidate_angles.md` | Yes / No | Source angle and risks |
+| Writing Intent | `{workspace-root}/research-questions/{field-slug}/writing_intent.md` | Yes / No | Target framing and constraints |
+| Research Opportunities | `{workspace-root}/field-maps/{field-slug}/research_opportunities.md` | Yes / No | Source gap |
+| Research Clusters | `{workspace-root}/field-maps/{field-slug}/research_clusters.md` | Yes / No | Field-level context |
 
 ## Verdict Handling Decision
 

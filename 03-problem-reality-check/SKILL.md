@@ -9,13 +9,22 @@ Use this skill to run a Problem Reality Check: route to exactly one Research Que
 
 This skill checks the problem motivation. It does not critique the full method, design the experiment, or collect new papers by default.
 
+## Output Root
+
+Set `{workspace-root}` before creating, scanning, or updating artifacts:
+
+- Default `{workspace-root}` to `workspace` (the repo-local `workspace/` directory).
+- If the user specifies a workspace root, use that path exactly and do not add another `workspace/` layer.
+- If the user provides an existing artifact or workflow path, infer `{workspace-root}` from that path and keep related artifacts under the same root.
+- Do not create new generated workflow directories directly at the repository root. If the user points to an existing root-level legacy workspace, inspect or update only that existing path.
+
 ## Core Workflow
 
 1. Locate the source Research Question Workspace.
 2. Pass the Source Card Gate by identifying exactly one Research Question Card.
-3. Create or resume a Problem Reality Check Workspace at `research-question-checks/{field-slug}/`.
+3. Create or resume a Problem Reality Check Workspace at `{workspace-root}/research-question-checks/{field-slug}/`.
 4. Write or update `source_research_questions.md`.
-5. Create a per-card check folder at `research-question-checks/{field-slug}/checks/{question-slug}/`.
+5. Create a per-card check folder at `{workspace-root}/research-question-checks/{field-slug}/checks/{question-slug}/`.
 6. Write `checks/{question-slug}/source_card.md`.
 7. Read the source card and its cited evidence paths.
 8. Review only local evidence from the source Research Question Workspace and source Field Map Workspace.
@@ -34,7 +43,7 @@ If the user asks to check multiple cards, ask them to choose one card for the cu
 
 The workflow must be routed to exactly one Research Question Card before interrogation begins.
 
-If the user provides a card path, inspect it directly. If the user provides a field slug or workspace path, inspect `research-questions/{field-slug}/cards/` and `research_question_cards.md`. If the user does not provide a card, scan `research-questions/` for available Research Question Workspaces and list candidate cards.
+If the user provides a card path, inspect it directly. If the user provides a field slug or workspace path, inspect `{workspace-root}/research-questions/{field-slug}/cards/` and `research_question_cards.md`. If the user does not provide a card, scan `{workspace-root}/research-questions/` for available Research Question Workspaces and list candidate cards.
 
 The Source Card Gate is passed only when all of the following are recorded:
 
@@ -62,7 +71,7 @@ Hard routing rules:
 Create durable artifacts at:
 
 ```text
-research-question-checks/{field-slug}/
+{workspace-root}/research-question-checks/{field-slug}/
 ```
 
 Use this structure:

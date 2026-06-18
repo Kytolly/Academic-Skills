@@ -7,6 +7,10 @@ description: Use when the user has a rough problem and reads papers to collect t
 
 Status: placeholder.
 
+## Output Root
+
+When writing durable artifacts, set `{workspace-root}` first. Default it to `workspace` (the repo-local `workspace/` directory), or use the user's specified workspace root exactly. Do not create generated content directly at the repository root.
+
 Use this skill for the motivation: 寻找方法启发.
 
 Expected output: 方法候选库.

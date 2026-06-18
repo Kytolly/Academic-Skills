@@ -7,6 +7,10 @@ description: Use when the user already has claims and reads papers to verify whe
 
 Status: placeholder.
 
+## Output Root
+
+When writing durable artifacts, set `{workspace-root}` first. Default it to `workspace` (the repo-local `workspace/` directory), or use the user's specified workspace root exactly. Do not create generated content directly at the repository root.
+
 Use this skill for the motivation: 寻找论文依据 / 引用支撑.
 
 Expected output: citation bank organized by claim.
