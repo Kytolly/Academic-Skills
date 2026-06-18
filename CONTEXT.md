@@ -104,6 +104,62 @@ _Avoid_: Limitation, reviewer objection, writing polish note
 A focused evidence gap identified by a Problem Reality Check Report, phrased as a recommended next investigation without automatically launching a new paper-search workflow.
 _Avoid_: Full literature review, automatic evidence collection, vague next step
 
+**Theoretical Grounding Workflow**:
+A downstream paper-reading workflow routed to exactly one Research Question Card and its completed Problem Reality Check Report, extracting Theory-Support Claims and Theory Hooks from the checked problem and turning them into a small set of theoretical traditions and a theory-backed problem framing.
+_Avoid_: Theory search, literature background, theoretical justification
+
+**Theoretical Grounding Source Gate**:
+The required routing step before a Theoretical Grounding Workflow begins; it is passed only when exactly one source Research Question Card and its completed Problem Reality Check Report are identified, including the Problem Reality Verdict and any motivation fragilities or evidence needs.
+_Avoid_: Optional context loading, broad theory scan
+
+**Theory-Support Claim**:
+A key judgment in the paper or project that needs theoretical support, recorded as the exact sentence to support and the reason it needs theory rather than decorative citation.
+_Avoid_: Core claim, citation topic, related theory
+
+**Problem-Theory Decomposition**:
+A durable artifact in a Theoretical Grounding Workflow that decomposes the checked problem into phenomenon, mechanism, failure, Theory-Support Claims, and boundary before candidate theoretical traditions are selected.
+_Avoid_: Internal reasoning, outline, theory notes
+
+**Theory Hook**:
+A concept relationship extracted from a Problem-Theory Decomposition that could be explained or supported by a theoretical tradition, such as how a source affects trustworthiness or how long-term state influences later action.
+_Avoid_: Keyword, theory name, citation label
+
+**Candidate Theoretical Tradition**:
+A possible theory, conceptual lineage, or research tradition considered because it can explain one or more Theory Hooks or support one or more Theory-Support Claims.
+_Avoid_: Famous theory, citation candidate, background area
+
+**Selected Theoretical Tradition**:
+A Candidate Theoretical Tradition kept for the final grounding because it directly supports a Theory-Support Claim, explains a Theory Hook, has clear boundaries, and can shape the problem framing.
+_Avoid_: Best-known theory, related work cluster, decorative citation
+
+**Targeted Theory Search**:
+A narrow paper-search step inside a Theoretical Grounding Workflow that the agent should run by default to verify Candidate Theoretical Traditions and representative sources for specific Theory Hooks or Theory-Support Claims without mapping the whole field.
+_Avoid_: Field map, broad literature review, theory brainstorming
+
+**Provisional Theoretical Grounding**:
+A theory-backed framing draft whose Candidate Theoretical Traditions have not yet been fully verified with representative sources after Targeted Theory Search is unavailable, explicitly deferred, or insufficient.
+_Avoid_: Final theoretical grounding, unsupported theory list
+
+**Theory Evidence Need**:
+A remaining source gap recorded only after Targeted Theory Search is unavailable or insufficient, naming the affected Theory-Support Claim, the missing source type, and the search question needed to stabilize the theoretical framing.
+_Avoid_: User homework, vague citation gap, general bibliography need
+
+**Theoretical Grounding Workspace**:
+A durable artifact set for grounding checked Research Question Cards from exactly one Research Question Workspace, organized around source-problem routing, per-card grounding folders, Theory Hooks, selected theoretical traditions, and final theory-backed framing.
+_Avoid_: Problem Reality Check folder, theory notes folder, background reading dump
+
+**Theoretical Pillar**:
+A claim-centered theoretical support structure in a Theoretical Grounding Report, linking one Theory-Support Claim to the Selected Theoretical Traditions that support it, the boundaries of that support, and the framing change it enables.
+_Avoid_: Theory list, background section, named citation cluster
+
+**Theoretical Grounding Report**:
+The final artifact of a Theoretical Grounding Workflow, containing a theory-backed problem framing, Theoretical Pillars organized by Theory-Support Claim, framing changes from the original Research Question Card, and remaining fragilities or evidence needs.
+_Avoid_: Theory summary, related work section, citation list
+
+**Theoretical Tradition Selection Gate**:
+The required confirmation step before writing a Theoretical Grounding Report; it is passed only when the user confirms, revises, or explicitly delegates the 2-4 Selected Theoretical Traditions and their rationale.
+_Avoid_: Automatic theory choice, hidden selection, final theory list
+
 **Problem Reality Check Workspace**:
 A durable artifact set for single-card Problem Reality Checks from exactly one Research Question Workspace, organized around source-card routing, per-card check reports, cross-report comparison, and evidence needs.
 _Avoid_: Research Question Workspace subfolder, comments folder, review notes dump
@@ -165,3 +221,7 @@ Domain expert: "No. Use **Field Map Workflow** for the full process. It creates 
 Dev: "Should we run a `risk objection` pass on all three question cards?"
 
 Domain expert: "Not for problem motivation. Use a **Problem Reality Check** after the **Source Card Gate** selects exactly one **Research Question Card**. The check asks one **Challenge Question** at a time, records an **Interrogation Transcript**, then writes one **Problem Reality Check Report**, assigns a **Problem Reality Verdict**, flags **Unsafe Motivation Claims**, and records **Targeted Evidence Needs** without launching a new paper search."
+
+Dev: "Can the theoretical grounding skill just list provenance theory, trust theory, and governance theory?"
+
+Domain expert: "No. Use a **Theoretical Grounding Workflow** only after the **Theoretical Grounding Source Gate** finds one checked card and its completed **Problem Reality Check Report**. First write a **Problem-Theory Decomposition**, confirm the **Theory-Support Claims**, extract **Theory Hooks**, run **Targeted Theory Search**, then keep only **Selected Theoretical Traditions** that support claim-centered **Theoretical Pillars** in the final **Theoretical Grounding Report**. If sources are still thin after search, record a **Theory Evidence Need** instead of pretending the theory support is final."
