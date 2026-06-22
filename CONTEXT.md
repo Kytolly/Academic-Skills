@@ -285,7 +285,7 @@ A possible method design assembled from Method Patterns, recording its method th
 _Avoid_: Final method, implementation plan, idea sketch
 
 **Committed Method Design**:
-A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, positioning, or risk-objection workflows. Baseline and metric selection now belong inside the Experiment Design Workflow.
+A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, research-framing, or risk-objection workflows. Baseline and metric selection now belong inside the Experiment Design Workflow.
 _Avoid_: Candidate Method, provisionally committed method, agent-generated method, real method
 
 **Method Thesis**:
@@ -339,6 +339,42 @@ _Avoid_: Metric bank, proxy metric without claim mapping, metric formula detache
 **Ablation And Control Plan**:
 A durable artifact in an Experiment Design Workflow that tests the Mechanistic Claim through component removals, intervention-point ablations, data-source ablations, stress tests, negative controls, sanity checks, and confound checks.
 _Avoid_: Decorative ablation list, one-off component removal, unchecked leakage or unfair comparison
+
+**Research Framing Workflow**:
+A downstream paper-reading workflow that turns one stable current research source into paper-facing expression by comparing closest related works, checking claim-level citation support, clarifying positioning, identifying contribution highlights, and extracting reusable writing moves.
+_Avoid_: Citation support as a separate workflow, positioning-only check, writing-style collection, broad related-work scan
+
+**Research Framing Source Gate**:
+The required routing step before a Research Framing Workflow begins; it is passed only when exactly one current research source, its stable and provisional claims, known close works, writing goal, and scope boundaries are explicit.
+_Avoid_: Draft polishing without source status, broad paper-writing help, hidden unstable claims
+
+**Close Work Set**:
+The 3-8 papers, systems, benchmarks, or methods that most strongly define how the user's current research must be compared, positioned, and cited in a paper.
+_Avoid_: General bibliography, field map cluster, all related work, convenient citations
+
+**Claim Support Bank**:
+A durable artifact in a Research Framing Workflow that maps each paper-facing claim to sources that directly support, weakly support, narrow, contradict, or merely background the claim, with safer wording recorded when support is too thin.
+_Avoid_: Citation list, bibliography dump, decorative references, unsupported motivation prose
+
+**Positioning Matrix**:
+A durable artifact in a Research Framing Workflow that compares the user's work with the Close Work Set across problem, method, setting, assumptions, evidence, contribution type, and novelty boundary.
+_Avoid_: Similarity table, related-work summary, uniqueness proof, baseline selection
+
+**Paper Story Spine**:
+The compact narrative route for the current research, connecting known situation, unresolved tension, close-work limitation, proposed intervention, evidence plan, and contribution highlights.
+_Avoid_: Abstract draft, marketing slogan, generic motivation outline
+
+**Contribution Highlight**:
+A paper-facing point worth foregrounding because it is both true of the user's current research and differentiating against the Close Work Set.
+_Avoid_: Feature list, overclaim, novelty claim without comparison
+
+**Writing Move Library**:
+A durable artifact in a Research Framing Workflow that extracts reusable rhetorical structures from close papers, such as gap packaging, related-work transitions, contribution lists, limitation handling, and figure or table patterns, without copying prose.
+_Avoid_: Phrase bank, paraphrase source, style mimicry, quote collection
+
+**Research Framing Package**:
+The final artifact of a Research Framing Workflow, containing the source research summary, Close Work Set, Claim Support Bank, Positioning Matrix, Paper Story Spine, Contribution Highlights, safe claims, claims to avoid, Writing Move Library, and recommended introduction or related-work outline.
+_Avoid_: Separate citation bank, separate positioning matrix, separate writing template, polished paper section
 
 **Provisional Method Design**:
 The final artifact of a Method Commitment Workflow when the Method Commitment Status is `provisionally-committed`, recording the nearly stable method design together with the Method Commitment Blockers that prevent downstream routing.

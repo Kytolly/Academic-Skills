@@ -16,7 +16,7 @@ Method Decision Log: `method_decision_log.md`
 
 ## Do-Not-Route Warning
 
-The current method structure is not stable enough for downstream experiment design, positioning, or risk-objection workflows. Baseline and metric selection should wait until the method can enter experiment design.
+The current method structure is not stable enough for downstream experiment design, research-framing, or risk-objection workflows. Baseline and metric selection should wait until the method can enter experiment design.
 
 ## Redesign Verdict
 
@@ -48,7 +48,7 @@ Primary failed dimension:
 
 ## Recommended Next Step
 
-- Return to method commitment with a revised Source Method / return to method inspiration / run citation support / run positioning differentiation / ask user for design choice / other
+- Return to method commitment with a revised Source Method / return to method inspiration / run research framing / ask user for design choice / other
 
 Rationale:
 

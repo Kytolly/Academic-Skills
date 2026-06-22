@@ -126,4 +126,4 @@ Decision rationale:
 
 ## Next Action
 
-- {Next paper search, experiment design, positioning check, or risk objection}
+- {Next paper search, experiment design, research framing, or risk objection}

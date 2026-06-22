@@ -312,7 +312,7 @@ For each Theory Evidence Need, record:
 - suggested search question
 - provisional wording to use until evidence is found
 
-Do not launch another workflow automatically. Recommend `paper-reading-citation-support`, `paper-reading-field-map`, or another paper-reading skill only when the next step is outside narrow theory verification.
+Do not launch another workflow automatically. Recommend `paper-reading-research-framing`, `paper-reading-field-map`, or another paper-reading skill only when the next step is outside narrow theory verification.
 
 ## Hard Confirmation Gates
 

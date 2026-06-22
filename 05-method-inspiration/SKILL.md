@@ -51,14 +51,14 @@ Do not:
 - present a Candidate Method as the paper's actual core method,
 - write a Committed Method Design,
 - treat novelty as established merely because an agent combined patterns,
-- or overdevelop experiment-design, positioning, or reviewer-objection sections.
+- or overdevelop experiment-design, research-framing, or reviewer-objection sections.
 
 It is fine to record light downstream implications, such as:
 
 - experiment implications for `paper-reading-experiment-design`,
 - likely baseline pressures for `paper-reading-experiment-design`,
 - claims that may need metric signals in `paper-reading-experiment-design`,
-- close-work risks for `paper-reading-positioning-differentiation`,
+- close-work risks for `paper-reading-research-framing`,
 - and weak links for `paper-reading-risk-objection`.
 
 These are routing hints only. The later workflows should use a human-owned Committed Method Design, not an uncommitted Candidate Method, as their main source.

@@ -1,6 +1,6 @@
 ---
 name: paper-reading-method-commitment
-description: Use when the user has a selected Candidate Method, multiple Candidate Methods to merge, a user-authored rough method, or a reconstructed chat method and wants to converge on one human-owned method outcome before experiment design, positioning, or risk review.
+description: Use when the user has a selected Candidate Method, multiple Candidate Methods to merge, a user-authored rough method, or a reconstructed chat method and wants to converge on one human-owned method outcome before experiment design, research framing, or risk review.
 ---
 
 # Method Commitment

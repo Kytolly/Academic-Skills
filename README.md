@@ -27,13 +27,9 @@
 │   └── SKILL.md
 ├── 07-experiment-design/
 │   └── SKILL.md
-├── 08-citation-support/
+├── 08-research-framing/
 │   └── SKILL.md
-├── 09-positioning-differentiation/
-│   └── SKILL.md
-├── 10-writing-patterns/
-│   └── SKILL.md
-└── 11-risk-objection/
+└── 09-risk-objection/
     └── SKILL.md
 ```
 
@@ -62,10 +58,8 @@
 | 05 | 寻找方法启发 | 方法候选库 | 问题初步确定，正在设计方法 |
 | 06 | 确定方法设计 | method commitment outcome | 方法启发之后，研究者准备认领、稳定或阻断自己的方法 |
 | 07 | 寻找实验设计 | experiment plan / baseline pressure matrix / claim-metric map | 方法基本确定，需要证明 claim、选择 baseline 和指标 |
-| 08 | 寻找论文依据 / 引用支撑 | citation bank | 写 introduction、related work 或 proposal |
-| 09 | 寻找定位和差异化 | positioning matrix | 方法和问题稳定，准备写 related work |
-| 10 | 学习写作套路 | 写作模板 / 表达素材 | 准备写 proposal、paper 或 related work |
-| 11 | 排雷和反驳自己 | risk list / objection list | idea 成型前后，尤其是过于兴奋时 |
+| 08 | 形成论文表达 / 研究定位 / 引用支撑 | research framing package | 问题、方法或实验主张稳定，准备写 introduction、related work、proposal 或 paper |
+| 09 | 排雷和反驳自己 | risk list / objection list | idea 成型前后，尤其是过于兴奋时 |
 
 ## 核心使用场景
 
@@ -121,11 +115,11 @@
 
 这里的产品设计是把“找方法”拆成三步。第一步先从 source research question 或 source problem brief 里拆出 Method Needs，明确方法需要解决什么失败、在什么 intervention point 起作用、输入输出是什么、成功信号是什么。第二步再围绕这些 needs 做 targeted method search，从 same-problem、adjacent-problem 和 far-analogy papers 中提取 Method Patterns。第三步才把通过 transfer mapping 的 patterns 组合成 3-5 个 Candidate Methods，并记录它们覆盖了哪些 needs、弱点在哪里、哪些地方仍然只是 provisional。
 
-这样做的优势是，方法启发不会变成随手拼装。用户最后拿到的是一个可审计的 Method Candidate Library，而不是一个被过早宣布为“最终方法”的 architecture。它保留了论文启发的来源、迁移边界、可用和不可用的部分，也为后续 method commitment、experiment design、positioning 和 risk objection 留出清楚的入口。
+这样做的优势是，方法启发不会变成随手拼装。用户最后拿到的是一个可审计的 Method Candidate Library，而不是一个被过早宣布为“最终方法”的 architecture。它保留了论文启发的来源、迁移边界、可用和不可用的部分，也为后续 method commitment、experiment design、research framing 和 risk objection 留出清楚的入口。
 
 ### 06 确定方法设计：从候选灵感变成研究者认领的方法
 
-适用场景：你已经有了一个比较像方法的东西：可能是 method inspiration 里选出的一个 Candidate Method，可能是几个候选方法的混合，也可能是你自己在聊天或笔记里写出的 rough method。现在的问题不再是“还能参考什么”，而是这个方法是否足够稳定，能不能被你作为论文里的核心方法认领，并进入实验设计、positioning 或风险排雷阶段。
+适用场景：你已经有了一个比较像方法的东西：可能是 method inspiration 里选出的一个 Candidate Method，可能是几个候选方法的混合，也可能是你自己在聊天或笔记里写出的 rough method。现在的问题不再是“还能参考什么”，而是这个方法是否足够稳定，能不能被你作为论文里的核心方法认领，并进入实验设计、research framing 或风险排雷阶段。
 
 常见做法是让 AI 从候选方案里“综合一个最终方法”，然后顺手写成 method section 的口吻。这样看起来推进很快，但风险很大：方法的 source 不清楚，哪些部分是借来的、哪些部分是自己主张的说不清，mechanistic claim 也没有被攻击过。更麻烦的是，用户可能还没有真正承诺这个方法，后续实验却已经默认它是最终设计。
 
@@ -140,3 +134,19 @@
 常见做法是先列几个热门 benchmark，再补几个常见指标。问题是，这样很容易得到一套看起来完整但不能真正回答 mechanistic claim 的实验：baseline 不知道在压力测试什么，metric 也不知道对应哪个论证句子。
 
 这里的产品设计是把找 baseline 和找指标合并进 experiment design。它先拆出 claim-evidence map，再选择 task/dataset，写 baseline pressure matrix 和 claim-metric map，最后补上 ablation、control 和 failure interpretation。用户最后拿到的是一条实验论证链：这个 claim 用哪个 setting 测、和谁比、看什么指标、什么结果算支持、什么失败说明方法哪里不成立。
+
+### 08 形成论文表达：把当前研究放进相似工作的比较框架里
+
+适用场景：你的问题、方法或实验主张已经比较稳定，现在需要把它写成一篇论文能成立的样子：故事怎么讲，最相近的工作是谁，差异在哪里，哪些 claim 有引用支撑，哪些出彩点值得放到 introduction、related work 或 proposal 里。
+
+原来“引用支撑”“定位差异化”“学习写作套路”看起来像三个动作，但真实写作时它们通常绑在一起发生。你不会脱离相似研究去判断某个 claim 是否该写，也不会脱离 close work 去学 gap 怎么包装；所谓写作套路，本质上也是观察别人如何把自己的贡献放进已有研究之间。
+
+这里的产品设计是把三件事合并成 Research Framing Workflow。它先确认当前研究源，例如 Research Question Card、Committed Method Design、实验计划或草稿，再建立 Close Work Set。阅读这些相似工作时同时抽取 claim support、positioning matrix、story spine、contribution highlights 和 writing moves。用户最后拿到的不是零散素材，而是一份 research framing package：它说明论文故事、相似工作边界、可写 claim、不可过度声称的地方、差异化表述和可迁移的写作结构。
+
+### 09 排雷和反驳自己：在太顺的时候找最强攻击
+
+适用场景：你的 idea 已经成型，甚至已经有了问题、方法和实验路线，但担心自己只看到了支持材料，没有认真面对最可能被 reviewer 或导师攻击的地方。
+
+常见做法是泛泛列一些 limitation，或者等到投稿前才补 rebuttal 话术。问题是，这样的风险整理通常太晚，也太软：它没有真正找负面证据、相似工作压力、假设漏洞、可行性风险和实验失败解释。
+
+这里的产品设计是把排雷作为一个独立的攻击流程。它不服务于把故事讲得更漂亮，而是专门问：最强反对意见是什么？现有工作是否已经做了近似版本？关键假设有没有证据？实验失败会说明什么？哪些 claim 应该提前降级？用户最后得到的是 reviewer-style objection list 和初步 response，不是润色后的 confidence。

@@ -97,7 +97,7 @@ Before writing the report, inspect the source card's evidence base:
 - source `writing_intent.md` when motivation fit affects the problem boundary
 - source Field Map `research_opportunities.md` or `research_clusters.md` when the card's cited gap needs context
 
-Do not claim that new external evidence was searched unless the user explicitly ran another workflow. This skill may identify Targeted Evidence Needs, but it should not launch a new literature search, field map expansion, or citation-support run by itself.
+Do not claim that new external evidence was searched unless the user explicitly ran another workflow. This skill may identify Targeted Evidence Needs, but it should not launch a new literature search, field map expansion, or research-framing run by itself.
 
 If local files are missing or links are broken, record that as evidence fragility rather than silently filling the gap.
 
@@ -210,9 +210,9 @@ Do not execute the next workflow automatically. The Problem Reality Check should
 
 Useful next-skill routing:
 
-- Use `paper-reading-citation-support` when existing citations must be checked against specific motivation claims.
+- Use `paper-reading-research-framing` when existing citations must be checked against specific motivation claims.
 - Use `paper-reading-field-map` when the problem area itself is under-mapped or the card may be missing a central branch of work.
-- Use `paper-reading-positioning-differentiation` when the main risk is that close work already solves or reframes the problem.
+- Use `paper-reading-research-framing` when the main risk is that close work already solves or reframes the problem.
 - Use `paper-reading-risk-objection` when the problem is real but the user wants the five strongest reviewer attacks and initial responses.
 - Use `paper-reading-experiment-design` when the problem is real but the executable study route is unclear.
 
