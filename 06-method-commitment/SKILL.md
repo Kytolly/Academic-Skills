@@ -1,13 +1,13 @@
 ---
 name: paper-reading-method-commitment
-description: Use when the user has a selected Candidate Method, multiple Candidate Methods to merge, a user-authored rough method, or a reconstructed chat method and wants to converge on one human-owned method outcome before experiment design, baseline search, metric search, positioning, or risk review.
+description: Use when the user has a selected Candidate Method, multiple Candidate Methods to merge, a user-authored rough method, or a reconstructed chat method and wants to converge on one human-owned method outcome before experiment design, positioning, or risk review.
 ---
 
 # Method Commitment
 
 Use this skill to run a Method Commitment Workflow: normalize exactly one Source Method against exactly one Method Commitment Source Problem, review inherited local context, reconstruct the method anatomy, attack high-risk design assumptions with the user, record structure-changing decisions, assign a status, and write status-aligned artifacts.
 
-This is a convergence workflow. It does not run broad method search, invent a full method from nothing, automatically choose the best Candidate Method, or write full experiment, baseline, or metric plans.
+This is a convergence workflow. It does not run broad method search, invent a full method from nothing, automatically choose the best Candidate Method, or write full experiment plans.
 
 Only `committed` output is downstream-ready. `provisionally-committed`, `needs-redesign`, and `reject-current-method` must not be routed as normal sources for downstream workflows.
 

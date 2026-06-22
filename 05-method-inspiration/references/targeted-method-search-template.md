@@ -14,7 +14,7 @@ Search default: Run / Deferred by user / Unavailable
 
 Search boundary:
 
-- {What was searched and why this is not a broad related-work scan or baseline search}
+- {What was searched and why this is not a broad related-work scan or baseline selection}
 
 Search limitations:
 

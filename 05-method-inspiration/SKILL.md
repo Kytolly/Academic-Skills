@@ -51,13 +51,13 @@ Do not:
 - present a Candidate Method as the paper's actual core method,
 - write a Committed Method Design,
 - treat novelty as established merely because an agent combined patterns,
-- or overdevelop experiment, baseline, metric, positioning, or reviewer-objection sections.
+- or overdevelop experiment-design, positioning, or reviewer-objection sections.
 
 It is fine to record light downstream implications, such as:
 
 - experiment implications for `paper-reading-experiment-design`,
-- likely baseline pressure for `paper-reading-baseline-search`,
-- claims that may need metrics for `paper-reading-metric-search`,
+- likely baseline pressures for `paper-reading-experiment-design`,
+- claims that may need metric signals in `paper-reading-experiment-design`,
 - close-work risks for `paper-reading-positioning-differentiation`,
 - and weak links for `paper-reading-risk-objection`.
 
@@ -172,7 +172,7 @@ If several decompositions are plausible, present 2-4 options or a binary tradeof
 
 Run Targeted Method Search by default for each confirmed Method Need unless the user explicitly says not to search or search is unavailable.
 
-Targeted Method Search is narrow. It looks for method ideas that satisfy specific Method Needs; it is not a broad related-work scan, a full Field Map Workflow, or a baseline search.
+Targeted Method Search is narrow. It looks for method ideas that satisfy specific Method Needs; it is not a broad related-work scan, a full Field Map Workflow, or baseline selection.
 
 Use three source-paper categories:
 
@@ -190,7 +190,7 @@ For each search result that enters the candidate set, record:
 - what may transfer
 - what probably will not transfer
 
-Do not treat Same-Problem Papers as baselines by default. A paper may inspire a method pattern, become a baseline candidate later, or both, but baseline selection belongs to `paper-reading-baseline-search`.
+Do not treat Same-Problem Papers as baselines by default. A paper may inspire a method pattern, become a baseline candidate later, or both, but baseline selection belongs to `paper-reading-experiment-design`.
 
 ## Method Search Sufficiency Check
 

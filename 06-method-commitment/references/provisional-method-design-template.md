@@ -18,7 +18,7 @@ Method Decision Log: `method_decision_log.md`
 
 ## Do-Not-Route Warning
 
-This design is not a normal source for experiment design, baseline search, metric search, positioning, or risk-objection workflows until blockers are resolved and Explicit Method Commitment Confirmation is obtained.
+This design is not a normal source for experiment design, positioning, or risk-objection workflows until blockers are resolved and Explicit Method Commitment Confirmation is obtained. Baseline and metric selection should wait until the method can enter experiment design.
 
 ## Provisional Method Thesis
 

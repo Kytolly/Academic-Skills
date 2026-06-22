@@ -238,7 +238,7 @@ _Avoid_: Hidden requirement inference, automatic method search, informal needs c
 
 **Targeted Method Search**:
 A narrow paper-search step inside a Method Inspiration Workflow that looks for method ideas for specific Method Needs across Same-Problem Papers, Adjacent-Problem Papers, and Far-Analogy Papers.
-_Avoid_: Method Paper Search, broad related work search, baseline search
+_Avoid_: Method Paper Search, broad related work search, baseline selection
 
 **Method Search Sufficiency Check**:
 A coverage-based check in a Method Inspiration Workflow that decides whether each core Method Need has enough Same-Problem, Adjacent-Problem, and Far-Analogy evidence to extract Method Patterns and move toward assembly, or should remain marked as `needs-search`.
@@ -285,7 +285,7 @@ A possible method design assembled from Method Patterns, recording its method th
 _Avoid_: Final method, implementation plan, idea sketch
 
 **Committed Method Design**:
-A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, baseline search, metric search, positioning, or risk-objection workflows.
+A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, positioning, or risk-objection workflows. Baseline and metric selection now belong inside the Experiment Design Workflow.
 _Avoid_: Candidate Method, provisionally committed method, agent-generated method, real method
 
 **Method Thesis**:
@@ -315,6 +315,30 @@ _Avoid_: Status-neutral final method file, misleading committed artifact, hidden
 **Method Commitment Summary**:
 The always-present routing summary for a Method Commitment Workflow, recording the Source Method, Method Commitment Source Problem, Method Commitment Status, output artifact, blockers, next recommended workflow, and do-not-route warnings.
 _Avoid_: Final method design, duplicate output artifact, unstructured index note
+
+**Experiment Design Workflow**:
+A downstream paper-reading workflow that turns one source method or research question into a claim-to-evidence experiment plan, including tasks, datasets, protocols, baseline pressures, metric signals, ablations, controls, and human evaluation or user studies when needed.
+_Avoid_: Separate baseline workflow, separate metric workflow, benchmark list, metric bank, loose experiment brainstorm
+
+**Experiment Design Source Gate**:
+The required routing step before an Experiment Design Workflow begins; it is passed only when the source artifact, source status, key claims, target outcome, target failure, intervention point, scope boundaries, and inherited do-not-route warnings are explicit. A Committed Method Design is the normal source; rough methods or Research Question Cards produce provisional experiment designs.
+_Avoid_: Implicit source, hidden provisional status, using blocked method designs as normal sources
+
+**Claim-Evidence Map**:
+A durable artifact in an Experiment Design Workflow that decomposes the Method Thesis, Mechanistic Claim, assumptions, and target outcomes into the observable evidence needed to support or reject each claim.
+_Avoid_: Dataset-first experiment plan, ungrounded metric list, vague validation idea
+
+**Baseline Pressure Matrix**:
+A durable artifact in an Experiment Design Workflow that selects baselines by the claim or reviewer objection they pressure-test, including close work, strong recent methods, classic expected baselines, lower bounds, component-equivalent baselines, ablated variants, and upper bounds when meaningful.
+_Avoid_: Baseline list, popularity-based inclusion, hiding difficult close work
+
+**Claim-Metric Map**:
+A durable artifact in an Experiment Design Workflow that links each key claim to an observable construct, primary and diagnostic metrics, measurement protocol, improvement direction, success criterion when known, and validity risks.
+_Avoid_: Metric bank, proxy metric without claim mapping, metric formula detached from protocol
+
+**Ablation And Control Plan**:
+A durable artifact in an Experiment Design Workflow that tests the Mechanistic Claim through component removals, intervention-point ablations, data-source ablations, stress tests, negative controls, sanity checks, and confound checks.
+_Avoid_: Decorative ablation list, one-off component removal, unchecked leakage or unfair comparison
 
 **Provisional Method Design**:
 The final artifact of a Method Commitment Workflow when the Method Commitment Status is `provisionally-committed`, recording the nearly stable method design together with the Method Commitment Blockers that prevent downstream routing.
@@ -444,7 +468,7 @@ Domain expert: "No. A **Method Thesis** says what the method claims; the **Mecha
 
 Dev: "Should Method Commitment write the full experiment plan?"
 
-Domain expert: "No. A **Committed Method Design** should record **Method Commitment Downstream Pressure Points**: required ablations, implied baseline pressures, and metric signals. Full protocols, baseline sets, and metric definitions belong to later workflows."
+Domain expert: "No. A **Committed Method Design** should record **Method Commitment Downstream Pressure Points**: required ablations, implied baseline pressures, and metric signals. Full protocols, baseline sets, and metric definitions belong to the later **Experiment Design Workflow**."
 
 Dev: "Does `committed` mean the method is already correct?"
 
