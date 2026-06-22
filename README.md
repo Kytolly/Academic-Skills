@@ -118,3 +118,23 @@
 这里的产品设计是先从研究问题本身出发，找出哪些判断真的需要理论支持。比如，是要解释某种失败为什么会发生，还是要说明某类行为为什么会影响信任、决策或长期效果。只有先确定这些需要支撑的判断，再去寻找合适的理论传统，理论才不会变成泛泛的背景知识。
 
 这样做的优势是，理论最终服务于论文论证。用户得到的不是一串理论名字，而是更清楚的问题 framing：哪些 claim 有理论支柱，哪些 claim 只能谨慎表述，哪些经验问题不能靠理论替代证据。它适合写 proposal、introduction、theoretical framing，也适合在一个偏经验的问题需要提升概念深度时使用。
+
+### 05 寻找方法启发：从论文方法变成候选方法库
+
+适用场景：你的研究问题已经有了初步边界，甚至已经知道大概要干预哪个失败环节，但还不知道方法应该长什么样。这个阶段的核心需求不是马上发明一个完整方法，而是从论文里收集可迁移的机制、模块、训练流程、推理流程、数据构造方式或优化目标。
+
+常见做法是直接搜索“相关方法”，然后把几篇论文的 architecture 拼在一起。问题是，这样很容易把论文里的完整方法当成可以直接搬走的答案，也容易忽略自己的问题到底需要哪些能力：有些模块看起来高级，但并不对应当前问题的关键失败；有些方法来自相邻问题，真正可迁移的其实只是其中一个很小的机制。
+
+这里的产品设计是把“找方法”拆成三步。第一步先从 source research question 或 source problem brief 里拆出 Method Needs，明确方法需要解决什么失败、在什么 intervention point 起作用、输入输出是什么、成功信号是什么。第二步再围绕这些 needs 做 targeted method search，从 same-problem、adjacent-problem 和 far-analogy papers 中提取 Method Patterns。第三步才把通过 transfer mapping 的 patterns 组合成 3-5 个 Candidate Methods，并记录它们覆盖了哪些 needs、弱点在哪里、哪些地方仍然只是 provisional。
+
+这样做的优势是，方法启发不会变成随手拼装。用户最后拿到的是一个可审计的 Method Candidate Library，而不是一个被过早宣布为“最终方法”的 architecture。它保留了论文启发的来源、迁移边界、可用和不可用的部分，也为后续 method commitment、experiment design、baseline search 和 risk objection 留出清楚的入口。
+
+### 06 确定方法设计：从候选灵感变成研究者认领的方法
+
+适用场景：你已经有了一个比较像方法的东西：可能是 method inspiration 里选出的一个 Candidate Method，可能是几个候选方法的混合，也可能是你自己在聊天或笔记里写出的 rough method。现在的问题不再是“还能参考什么”，而是这个方法是否足够稳定，能不能被你作为论文里的核心方法认领，并进入实验、baseline、metric 或 positioning 阶段。
+
+常见做法是让 AI 从候选方案里“综合一个最终方法”，然后顺手写成 method section 的口吻。这样看起来推进很快，但风险很大：方法的 source 不清楚，哪些部分是借来的、哪些部分是自己主张的说不清，mechanistic claim 也没有被攻击过。更麻烦的是，用户可能还没有真正承诺这个方法，后续实验却已经默认它是最终设计。
+
+这里的产品设计是把“确定方法”做成一个收敛和承诺流程。它先把输入规范成 exactly one Source Method，并绑定到 exactly one Method Commitment Source Problem；然后回看已有的本地 artifacts，包括 problem reality check、method needs、method patterns、transfer mapping 和 candidate methods，保留上游已经暴露的脆弱点。之后再重建方法 anatomy，明确 Method Thesis、Mechanistic Claim、核心机制、模块、输入输出、训练或推理流程、novelty boundary、assumptions、weakest link 和 downstream pressure points。
+
+这样做的优势是，方法不是被 agent 偷偷“定稿”，而是经过攻击和确认后成为研究者拥有的设计。高风险维度会用 challenge questions 逐个追问，结构性决定会写进 decision log，最后只会得到一种明确状态：committed、provisionally-committed、needs-redesign 或 reject-current-method。只有真正 committed 的方法才适合进入后续实验设计和写作链路；其他状态会明确记录 blocker、重设计方向或拒绝理由，避免把不稳定的方法继续往下游传。
