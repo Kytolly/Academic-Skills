@@ -64,7 +64,7 @@
 | 03 | 验证问题是否真实 | 问题依据 / problem justification | 有初步 idea，但担心是伪问题 |
 | 04 | 寻找理论依据 | 理论支柱 | 问题已有，但需要理论地基 |
 | 05 | 寻找方法启发 | 方法候选库 | 问题初步确定，正在设计方法 |
-| 06 | 确定方法设计 | committed method design | 方法启发之后，研究者准备认领和稳定自己的方法 |
+| 06 | 确定方法设计 | method commitment outcome | 方法启发之后，研究者准备认领、稳定或阻断自己的方法 |
 | 07 | 寻找实验设计 | 实验方案草图 | 方法有雏形，但不知道怎么验证 |
 | 08 | 寻找 baseline | baseline list | 方法基本确定，准备实验或 proposal |
 | 09 | 寻找评价指标 | metric bank | 不知道如何证明 claim |

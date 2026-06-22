@@ -173,12 +173,52 @@ A downstream paper-reading workflow that turns one Research Question Card or Sou
 _Avoid_: Method brainstorm, architecture design, related-work scan
 
 **Method Inspiration Boundary**:
-The boundary that Method Inspiration stops at auditable Candidate Methods and must not ask the user to immediately commit to a paper's actual core method; the human researcher owns the later jump from inspiration to a Committed Method Design.
+The boundary that Method Inspiration stops at auditable Candidate Methods and must not ask the user to immediately commit to a paper's actual core method; the human researcher owns the later jump from inspiration to a committed or explicitly blocked method outcome.
 _Avoid_: Agent-generated final method, automatic novelty creation, complete method design, quick commitment prompt
 
 **Method Commitment Workflow**:
-A reserved downstream workflow for turning method inspiration and the researcher's own judgment into a human-owned Committed Method Design; it is intentionally separate from Method Inspiration and is not yet specified.
-_Avoid_: Method Inspiration final step, quick synthesis prompt, agent-owned method invention
+An independent convergence workflow that turns one confirmed Source Method and the researcher's own judgment into a human-owned committed, provisional, redesign, or rejection outcome. It may follow Method Inspiration, start from a user-authored method, or reconstruct a method from chat, but it must not treat a Candidate Method as already committed.
+_Avoid_: Method Inspiration final step, quick synthesis prompt, agent-owned method invention, automatic candidate-method selection
+
+**Source Method**:
+The confirmed rough method input to a Method Commitment Workflow, normalized from exactly one selected Candidate Method, user-authored method, hybrid method, or reconstructed chat method and bound to exactly one Method Commitment Source Problem before commitment begins.
+_Avoid_: Candidate Method by default, final method, loose method idea
+
+**Method Source Mode**:
+The recorded origin type for a Source Method, such as `selected-candidate-method`, `user-authored-method`, `hybrid-method`, or `reconstructed-from-chat`. When multiple Candidate Methods or inspirations are merged, the mode must be `hybrid-method` and must preserve borrowed pieces, discarded pieces, merge rationale, and the new weakest link.
+_Avoid_: Hidden merge, selected candidate by default, vague source, automatic synthesis
+
+**Method Commitment Source Problem**:
+The exactly one Research Question Card, Source Problem Brief, or confirmed problem statement that a Source Method is being committed against in the current Method Commitment Workflow.
+_Avoid_: General application area, multiple target problems, future generalization, transferable use case
+
+**Method Commitment Source Gate**:
+The required routing and confirmation step before a Method Commitment Workflow reconstructs or attacks the method; it is passed only when exactly one Source Method and exactly one Method Commitment Source Problem have been recorded and confirmed or explicitly delegated.
+_Avoid_: Optional source note, implicit chat context, automatic source reconstruction
+
+**Method Commitment Context Review**:
+The required local-artifact review after the Method Commitment Source Gate, preserving relevant source-problem evidence, Problem Reality Check fragilities, unsafe motivation claims, close-work risks, Method Needs, Candidate Methods, Method Patterns, and Method Candidate Library judgments before method attack begins.
+_Avoid_: Clean-slate method drafting, default web search, forgetting prior fragilities, broad literature refresh
+
+**Method Design Attack Pass**:
+A method-focused interrogation step inside a Method Commitment Workflow that stress-tests the Source Method's structure, mechanism, assumptions, novelty boundary, feasibility, and downstream consequences before commitment. High-risk dimensions require live Challenge Questions; low-risk dimensions may be recorded as cleared from artifacts.
+_Avoid_: Problem Reality Check, one-shot method critique, generic reviewer objections, silent agent judgment
+
+**Method Attack Transcript**:
+A durable turn-by-turn record of a Method Design Attack Pass, capturing each high-risk Challenge Question, the provisional recommendation, the user's response or explicit delegation, and the resulting design decision.
+_Avoid_: Final report, hidden reasoning, informal notes, complete attack report without user responses
+
+**Method Decision Log**:
+A durable decision record inside a Method Commitment Workflow that captures only structure-changing method decisions, such as source mode, hybrid merge rationale, method boundary, Mechanistic Claim revision, weakest link, blockers, and final status.
+_Avoid_: Chat transcript, meeting notes, full attack transcript, implementation changelog
+
+**Method Commitment Gate**:
+The final confirmation step in a Method Commitment Workflow, requiring the researcher to confirm the method thesis, Mechanistic Claim, method boundary, weakest link, and any intentionally unfrozen open decisions before a Method Commitment Status is assigned.
+_Avoid_: Silent finalization, unchecked weak link, hidden open decision, automatic downstream routing
+
+**Explicit Method Commitment Confirmation**:
+A direct researcher confirmation that a method should receive `committed` Method Commitment Status and become downstream-ready. Agent recommendation, broad delegation, or "you decide" is not enough; without explicit confirmation, an otherwise stable method remains provisionally committed with a blocker.
+_Avoid_: Implicit approval, generic delegation, agent-owned commitment, silent downstream routing
 
 **Method Inspiration Workspace**:
 A durable artifact set for method inspiration from exactly one field context, organized around source-problem routing, per-problem inspiration folders, Method Needs, Method Patterns, Transfer Mappings, Candidate Methods, and Method Candidate Libraries.
@@ -245,8 +285,48 @@ A possible method design assembled from Method Patterns, recording its method th
 _Avoid_: Final method, implementation plan, idea sketch
 
 **Committed Method Design**:
-A human-owned method design that the researcher has chosen or authored after method inspiration, stable enough to serve as the source method for experiment design, baseline search, metric search, positioning, or risk-objection workflows.
-_Avoid_: Candidate Method, agent-generated method, real method
+A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, baseline search, metric search, positioning, or risk-objection workflows.
+_Avoid_: Candidate Method, provisionally committed method, agent-generated method, real method
+
+**Method Thesis**:
+The paper-level method claim in a Candidate Method or Committed Method Design, stating what mechanism is introduced at what intervention point to improve what target outcome under what scope.
+_Avoid_: Method name, contribution slogan, implementation summary
+
+**Mechanistic Claim**:
+The attackable causal hypothesis inside a Committed Method Design that explains why the proposed mechanism should improve the target outcome. It is the claim that ablations, baselines, metrics, and reviewer objections should pressure-test.
+_Avoid_: Method Thesis, intuition, expected result, novelty claim
+
+**Method Commitment Downstream Pressure Point**:
+A routing hint recorded in a Committed Method Design that names the ablations, baseline pressures, and metric signals implied by the method's Mechanistic Claim without designing the full experiment protocol.
+_Avoid_: Complete experiment design, final baseline set, metric formula, evaluation protocol
+
+**Method Commitment Status**:
+The controlled final status of a Method Commitment Workflow: `committed`, `provisionally-committed`, `needs-redesign`, or `reject-current-method`. Only `committed` is downstream-ready; `provisionally-committed` records a nearly stable design with named Method Commitment Blockers, not a normal source for downstream workflows.
+_Avoid_: Confidence score, proof of novelty, experiment result, paper acceptance prediction
+
+**Method Commitment Blocker**:
+A named unresolved issue that prevents a provisionally committed method from entering downstream workflows, such as an unstable Mechanistic Claim, unresolved weakest link, close-work saturation risk, missing feasibility evidence, missing explicit human commitment, or intentionally unfrozen design decision.
+_Avoid_: Minor TODO, hidden caveat, generic limitation, downstream routing hint
+
+**Method Commitment Output Artifact**:
+The status-aligned final artifact of a Method Commitment Workflow, chosen from Committed Method Design, Provisional Method Design, Method Redesign Brief, or Method Rejection Note according to the Method Commitment Status.
+_Avoid_: Status-neutral final method file, misleading committed artifact, hidden blocked outcome
+
+**Method Commitment Summary**:
+The always-present routing summary for a Method Commitment Workflow, recording the Source Method, Method Commitment Source Problem, Method Commitment Status, output artifact, blockers, next recommended workflow, and do-not-route warnings.
+_Avoid_: Final method design, duplicate output artifact, unstructured index note
+
+**Provisional Method Design**:
+The final artifact of a Method Commitment Workflow when the Method Commitment Status is `provisionally-committed`, recording the nearly stable method design together with the Method Commitment Blockers that prevent downstream routing.
+_Avoid_: Committed Method Design, downstream source method, vague draft
+
+**Method Redesign Brief**:
+The final artifact of a Method Commitment Workflow when the Method Commitment Status is `needs-redesign`, recording why the Source Method is not structurally stable, which parts remain salvageable, and what redesign decisions are required next.
+_Avoid_: Committed Method Design, failed final method, vague TODO note
+
+**Method Rejection Note**:
+The final artifact of a Method Commitment Workflow when the Method Commitment Status is `reject-current-method`, recording why the current Source Method should not proceed and which assumptions, fit claims, or feasibility constraints failed.
+_Avoid_: Committed Method Design, soft redesign, hidden rejection
 
 **Method Candidate Library**:
 The final artifact of a Method Inspiration Workflow, containing several Candidate Methods plus the selected, deferred, and rejected Method Patterns, transfer judgments, source URLs, risks, disposition reasons, and evidence statuses needed to compare and later revise them.
@@ -332,4 +412,60 @@ Domain expert: "Yes, but call the routing step the **Method Inspiration Source G
 
 Dev: "Should method inspiration end by asking the user to choose the final method?"
 
-Domain expert: "No. Respect the **Method Inspiration Boundary**: 05 ends with a **Method Candidate Library**, not a **Committed Method Design**. The later **Method Commitment Workflow** is reserved for the human researcher to turn inspiration into an owned method design."
+Domain expert: "No. Respect the **Method Inspiration Boundary**: 05 ends with a **Method Candidate Library**, not a **Committed Method Design**. A later **Method Commitment Workflow** starts only after one **Source Method** is confirmed, and that Source Method may come from a selected Candidate Method, a user-authored method, a hybrid method, or a reconstructed chat method."
+
+Dev: "If the method idea is already in chat, can Method Commitment just proceed?"
+
+Domain expert: "No. Even chat-derived ideas must pass the **Method Commitment Source Gate** by being normalized into one confirmed **Source Method** before reconstruction, attack, or commitment begins."
+
+Dev: "Can one Source Method be committed for several related problems at once?"
+
+Domain expert: "No. A **Source Method** must be bound to exactly one **Method Commitment Source Problem** in the current run. Transferability can be recorded, but the commitment target cannot be a bundle of future use cases."
+
+Dev: "If we choose CM-1 but borrow CM-3's lifecycle state machine, is that still a selected candidate method?"
+
+Domain expert: "No. The **Method Source Mode** is `hybrid-method` whenever multiple Candidate Methods or inspirations are merged. Record what was borrowed, what was discarded, why the merge is coherent, and what new weakest link it creates."
+
+Dev: "Can Method Commitment just read the Source Method and ignore earlier artifacts?"
+
+Domain expert: "No. Run a **Method Commitment Context Review** so prior Problem Reality Check fragilities, unsafe motivation claims, close-work risks, Method Needs, Candidate Methods, Method Patterns, and library judgments are inherited. Do not default to a new web search."
+
+Dev: "Can Method Commitment generate a full attack report in one shot?"
+
+Domain expert: "No. Run a **Method Design Attack Pass** and record a **Method Attack Transcript**. High-risk method dimensions need live Challenge Questions with user responses or explicit delegation; low-risk dimensions can be marked as cleared from artifacts."
+
+Dev: "Should the Method Decision Log record every turn of the conversation?"
+
+Domain expert: "No. The **Method Decision Log** records only structure-changing decisions: source mode, hybrid merge rationale, method boundary, Mechanistic Claim changes, weakest link, blockers, and status."
+
+Dev: "If the Method Thesis sounds plausible, is the method ready to commit?"
+
+Domain expert: "No. A **Method Thesis** says what the method claims; the **Mechanistic Claim** says why that mechanism should work. Method Commitment must make both explicit before the method can become a **Committed Method Design**."
+
+Dev: "Should Method Commitment write the full experiment plan?"
+
+Domain expert: "No. A **Committed Method Design** should record **Method Commitment Downstream Pressure Points**: required ablations, implied baseline pressures, and metric signals. Full protocols, baseline sets, and metric definitions belong to later workflows."
+
+Dev: "Does `committed` mean the method is already correct?"
+
+Domain expert: "No. **Method Commitment Status** describes structural readiness, not proven correctness. `committed` means downstream-ready; `provisionally-committed` means the design is nearly stable but blocked by named **Method Commitment Blockers** and should not enter downstream workflows yet."
+
+Dev: "Can Method Commitment leave weak points implicit if the final status is provisional?"
+
+Domain expert: "No. The **Method Commitment Gate** requires the weakest link and intentionally unfrozen open decisions to be explicit before any status is assigned. If they block downstream use, record them as **Method Commitment Blockers**."
+
+Dev: "Can the agent mark `committed` if it recommends commitment and the user delegated judgment?"
+
+Domain expert: "No. `committed` requires **Explicit Method Commitment Confirmation** from the researcher. Without it, even a strong method should remain `provisionally-committed` with missing explicit human commitment recorded as a blocker."
+
+Dev: "Should a rejected method still produce `committed_method_design.md` for completeness?"
+
+Domain expert: "No. Write a **Committed Method Design** only for `committed` outcomes. Use a **Provisional Method Design** for `provisionally-committed`, a **Method Redesign Brief** for `needs-redesign`, and a **Method Rejection Note** for `reject-current-method`."
+
+Dev: "Can the final artifact have a generic name regardless of status?"
+
+Domain expert: "No. The **Method Commitment Output Artifact** must match the **Method Commitment Status** so blocked, redesign, and rejection outcomes cannot be mistaken for downstream-ready committed methods."
+
+Dev: "If the status-specific output artifact exists, do we still need a summary?"
+
+Domain expert: "Yes. The **Method Commitment Summary** is always present as the routing index: it names the Source Method, status, output artifact, blockers, next workflow, and do-not-route warnings without replacing the status-specific artifact."
