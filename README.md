@@ -133,7 +133,7 @@
 
 常见做法是先列几个热门 benchmark，再补几个常见指标。问题是，这样很容易得到一套看起来完整但不能真正回答 mechanistic claim 的实验：baseline 不知道在压力测试什么，metric 也不知道对应哪个论证句子。
 
-这里的产品设计是把找 baseline 和找指标合并进 experiment design。它先拆出 claim-evidence map，再选择 task/dataset，写 baseline pressure matrix 和 claim-metric map，最后补上 ablation、control 和 failure interpretation。用户最后拿到的是一条实验论证链：这个 claim 用哪个 setting 测、和谁比、看什么指标、什么结果算支持、什么失败说明方法哪里不成立。
+这里的产品设计是把稳定方法拆成可被支持或推翻的证据链，而不是把找 benchmark、baseline 和指标做成几个分散动作。它先拆出 claim-evidence map，并让用户确认关键 claim 和证据路线，再选择 task/dataset/workload，写 baseline pressure matrix 和 claim-metric map，最后补上 ablation、control、reviewer objection 和 result interpretation。用户最后拿到的是一条实验论证链：这个 claim 用哪个 setting 测、和谁比、看什么指标、什么结果算支持、什么失败说明方法哪里不成立。
 
 ### 08 形成论文表达：把当前研究放进相似工作的比较框架里
 

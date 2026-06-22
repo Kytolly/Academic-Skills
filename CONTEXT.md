@@ -317,16 +317,36 @@ The always-present routing summary for a Method Commitment Workflow, recording t
 _Avoid_: Final method design, duplicate output artifact, unstructured index note
 
 **Experiment Design Workflow**:
-A downstream paper-reading workflow that turns one source method or research question into a claim-to-evidence experiment plan, including tasks, datasets, protocols, baseline pressures, metric signals, ablations, controls, and human evaluation or user studies when needed.
+A downstream paper-reading workflow that turns one source method or research question into a claim-to-evidence experiment plan, including tasks, datasets, protocols, baseline pressures, metric signals, ablations, controls, result interpretation, and human evaluation or user studies when needed. It starts from what must be proven or refuted, not from benchmark, baseline, or metric lists.
 _Avoid_: Separate baseline workflow, separate metric workflow, benchmark list, metric bank, loose experiment brainstorm
 
 **Experiment Design Source Gate**:
 The required routing step before an Experiment Design Workflow begins; it is passed only when the source artifact, source status, key claims, target outcome, target failure, intervention point, scope boundaries, and inherited do-not-route warnings are explicit. A Committed Method Design is the normal source; rough methods or Research Question Cards produce provisional experiment designs.
 _Avoid_: Implicit source, hidden provisional status, using blocked method designs as normal sources
 
+**Minimal Experiment Brief**:
+A provisional source-context record used when Experiment Design starts from a Research Question Card, Source Problem Brief, rough method, or non-committed source, naming the Method Thesis or question, Mechanistic Claim if available, target failure, intervention point, scope, non-goals, weakest link, main reviewer objection, and provisional status.
+_Avoid_: Method commitment substitute, final experiment context, hidden rough source
+
 **Claim-Evidence Map**:
-A durable artifact in an Experiment Design Workflow that decomposes the Method Thesis, Mechanistic Claim, assumptions, and target outcomes into the observable evidence needed to support or reject each claim.
+A durable artifact in an Experiment Design Workflow that decomposes the Method Thesis, Mechanistic Claim, assumptions, and target outcomes into the observable evidence needed to support or reject each claim, including evidence routes, evidence strength, reviewer objections, and failure interpretations.
 _Avoid_: Dataset-first experiment plan, ungrounded metric list, vague validation idea
+
+**Claim-Evidence Review Gate**:
+The required confirmation step before benchmark, baseline, metric, or protocol selection begins; it is passed only when the user confirms, revises, or explicitly delegates the key claim decomposition and evidence routes.
+_Avoid_: Silent claim decomposition, dataset-first routing, hidden proxy choice
+
+**Evidence Route**:
+The kind of study or analysis chosen to support or refute a claim, such as standard benchmark, targeted workload, synthetic controlled task, real-world case study, ablation, stress test, human evaluation, user study, or error analysis.
+_Avoid_: Dataset choice, metric choice, generic experiment idea
+
+**Experiment Stack**:
+The claim-aligned set of experiment layers selected for an Experiment Design Workflow, such as main effect, mechanism or ablation, robustness, generalization, human evaluation or user study, efficiency, and failure analysis.
+_Avoid_: Single benchmark run, experiment checklist, fixed required template
+
+**Evidence Strength Label**:
+A controlled label for how directly an experiment result supports a claim, such as direct evidence, strong proxy, weak proxy, anecdotal evidence, or speculative design assumption.
+_Avoid_: Confidence score, statistical significance, proof
 
 **Baseline Pressure Matrix**:
 A durable artifact in an Experiment Design Workflow that selects baselines by the claim or reviewer objection they pressure-test, including close work, strong recent methods, classic expected baselines, lower bounds, component-equivalent baselines, ablated variants, and upper bounds when meaningful.
@@ -339,6 +359,14 @@ _Avoid_: Metric bank, proxy metric without claim mapping, metric formula detache
 **Ablation And Control Plan**:
 A durable artifact in an Experiment Design Workflow that tests the Mechanistic Claim through component removals, intervention-point ablations, data-source ablations, stress tests, negative controls, sanity checks, and confound checks.
 _Avoid_: Decorative ablation list, one-off component removal, unchecked leakage or unfair comparison
+
+**Result Interpretation Contract**:
+A pre-results agreement in an Experiment Design Workflow that states what major success, failure, proxy mismatch, ablation, baseline, or human-evaluation result patterns would imply for the claim, method, or paper story.
+_Avoid_: Post-hoc explanation, success-only expectation, result summary
+
+**Experiment Design Review Gate**:
+The final confirmation step before an Experiment Design Workflow treats its artifacts as a final experiment plan; it is passed only when the user confirms, revises, or explicitly delegates the claim decomposition, evidence routes, experiment stack, baselines, metrics, ablations, controls, and result interpretations.
+_Avoid_: Silent final plan, agent-owned experiment design, human evaluation study
 
 **Research Framing Workflow**:
 A downstream paper-reading workflow that turns one stable current research source into paper-facing expression by comparing closest related works, checking claim-level citation support, clarifying positioning, identifying contribution highlights, and extracting reusable writing moves.
@@ -505,6 +533,14 @@ Domain expert: "No. A **Method Thesis** says what the method claims; the **Mecha
 Dev: "Should Method Commitment write the full experiment plan?"
 
 Domain expert: "No. A **Committed Method Design** should record **Method Commitment Downstream Pressure Points**: required ablations, implied baseline pressures, and metric signals. Full protocols, baseline sets, and metric definitions belong to the later **Experiment Design Workflow**."
+
+Dev: "Can Experiment Design start by finding common benchmarks, baselines, and metrics?"
+
+Domain expert: "No. Use the **Experiment Design Source Gate**, then write a **Claim-Evidence Map** and pass the **Claim-Evidence Review Gate** first. Choose **Evidence Routes**, an **Experiment Stack**, a **Baseline Pressure Matrix**, and a **Claim-Metric Map** only after the claims and reviewer objections are explicit."
+
+Dev: "Can the agent silently finalize the experiment plan after filling the artifacts?"
+
+Domain expert: "No. The **Experiment Design Review Gate** requires the researcher to confirm, revise, or explicitly delegate the claim decomposition, evidence routes, baselines, metrics, ablations, controls, and **Result Interpretation Contract**. This gate is about workflow ownership; it is not the same as a human evaluation or user study."
 
 Dev: "Does `committed` mean the method is already correct?"
 
