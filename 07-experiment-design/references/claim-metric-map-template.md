@@ -60,6 +60,20 @@ Use when claims involve understanding, learning gain, personalization, Theory of
 | --- | --- | --- | --- |
 | {Metric} | {Claim ID} | {Reason} | {Risk} |
 
+## Metric Review Record
+
+Review status:
+
+- draft / needs revision / accepted / provisional
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
+
+Open issues:
+
+- None / {Issue}
+
 ## Revision Log
 
 | Version | Change | Reason |

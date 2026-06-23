@@ -112,7 +112,7 @@ Status:
 
 | Candidate Method | Main Strength | Main Weakness | Best Use Case | Main Follow-Up |
 | --- | --- | --- | --- | --- |
-| CM-1 | {Strength} | {Weakness} | {Use case} | experiment-design / research-framing / risk-objection / method-commitment / none |
+| CM-1 | {Strength} | {Weakness} | {Use case} | experiment-design / research-framing / method-commitment / none |
 
 ## Downstream Routing Hints
 
@@ -123,7 +123,7 @@ These are hints only. Later workflows should use a Committed Method Design, not 
 | Turn inspiration into an owned method design | paper-reading-method-commitment | User is ready to commit after reflection |
 | Design validation, baselines, and metrics | paper-reading-experiment-design | A Committed Method Design exists and claims need measurement |
 | Clarify novelty | paper-reading-research-framing | Close-work risk remains high |
-| Attack assumptions | paper-reading-risk-objection | Weak links need reviewer-style stress testing |
+| Attack assumptions | paper-reading-experiment-design | Weak links need claim/evidence, baseline, or ablation pressure testing |
 
 ## Stop Condition Check
 

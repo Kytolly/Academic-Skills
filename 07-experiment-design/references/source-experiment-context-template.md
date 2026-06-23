@@ -8,7 +8,25 @@ Source Artifact: `{path or user-provided source}`
 
 Source Status: committed / research-question / provisional / rough
 
-Gate Confirmation Mode: confirmed by user / explicitly delegated / blocked
+Source Gate Status: draft / needs revision / blocked / passed
+
+User Decision: not reviewed / confirmed / explicitly delegated / mixed
+
+Open Issues: None / {Issue}
+
+## Source Decision Packet
+
+Recommended routing:
+
+- proceed / proceed provisionally / route back to method commitment / blocked
+
+Recommendation rationale:
+
+- {Why this source is or is not stable enough for experiment design}
+
+User response or delegation:
+
+- {Response}
 
 ## Source Summary
 
@@ -151,11 +169,19 @@ Feasibility or data constraints:
 | Intervention point | Yes / No |  |
 | Scope boundaries | Yes / No |  |
 | Inherited warnings | Yes / No |  |
-| Gate confirmation mode | Yes / No |  |
+| User decision recorded | Yes / No |  |
 
-Gate decision:
+Gate status:
 
-- passed / blocked / provisional
+- draft / needs revision / blocked / passed
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
+
+Open issues:
+
+- None / {Issue}
 
 ## Revision Log
 

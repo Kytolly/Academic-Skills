@@ -59,7 +59,7 @@ It is fine to record light downstream implications, such as:
 - likely baseline pressures for `paper-reading-experiment-design`,
 - claims that may need metric signals in `paper-reading-experiment-design`,
 - close-work risks for `paper-reading-research-framing`,
-- and weak links for `paper-reading-risk-objection`.
+- and weak links for `paper-reading-experiment-design`.
 
 These are routing hints only. The later workflows should use a human-owned Committed Method Design, not an uncommitted Candidate Method, as their main source.
 

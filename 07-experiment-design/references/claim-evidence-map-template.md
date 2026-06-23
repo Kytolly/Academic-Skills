@@ -4,7 +4,9 @@ Experiment Folder: `{workspace-root}/experiment-designs/{field-slug}/{method-or-
 
 Source Context: `source_experiment_context.md`
 
-Map Status: draft / review-gate-passed / explicitly-delegated / needs-revision
+Map Status: draft / needs-revision / review-gate-passed / provisional-sketch
+
+Claim-Evidence Review User Decision: not reviewed / confirmed / explicitly delegated / mixed
 
 ## Key Claims
 
@@ -17,6 +19,14 @@ Map Status: draft / review-gate-passed / explicitly-delegated / needs-revision
 | Claim ID | Observable Evidence Needed | Evidence Route | Task Or Scenario | Baseline Pressure Needed | Metric Signal Needed | Ablation Or Control Needed | Evidence Strength | Reviewer Objection Answered | Likely Failure Interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | C1 | {Evidence} | standard benchmark / targeted workload / synthetic controlled task / real-world case study / ablation study / stress test / human evaluation / user study / error analysis | {Task or scenario} | {Pressure} | {Signal} | {Ablation or control} | direct evidence / strong proxy / weak proxy / anecdotal evidence / speculative | {Objection} | {Interpretation} |
+
+## Claim-Evidence Decision Packets
+
+Use one row per core claim or low-risk grouped claim packet.
+
+| Packet ID | Claim IDs | Recommended Decision | User Decision | Resulting Update | Packet Status |
+| --- | --- | --- | --- | --- | --- |
+| P1 | C1 | accept route / narrow claim / change route / mark evidence gap / ask high-risk challenge | confirmed / explicitly delegated / revised / not reviewed | {Update made after user response} | draft / needs revision / accepted / provisional |
 
 ## Evidence Route Rationale
 
@@ -48,7 +58,11 @@ Use this section for live challenge questions before the Claim-Evidence Review G
 
 Gate status:
 
-- passed / explicitly delegated / needs revision / blocked
+- draft / needs revision / blocked / passed
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
 
 Accepted or delegated decisions:
 

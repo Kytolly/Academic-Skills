@@ -68,6 +68,20 @@ Record rejected baselines when a future reviewer may expect them.
 | Ablated proposed method | Yes / No / N/A | {Baseline or gap} |
 | Oracle, upper-bound, or human reference | Yes / No / N/A | {Baseline or gap} |
 
+## Baseline Review Record
+
+Review status:
+
+- draft / needs revision / accepted / provisional
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
+
+Open issues:
+
+- None / {Issue}
+
 ## Revision Log
 
 | Version | Change | Reason |

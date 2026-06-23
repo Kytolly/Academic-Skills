@@ -213,8 +213,7 @@ Useful next-skill routing:
 - Use `paper-reading-research-framing` when existing citations must be checked against specific motivation claims.
 - Use `paper-reading-field-map` when the problem area itself is under-mapped or the card may be missing a central branch of work.
 - Use `paper-reading-research-framing` when the main risk is that close work already solves or reframes the problem.
-- Use `paper-reading-risk-objection` when the problem is real but the user wants the five strongest reviewer attacks and initial responses.
-- Use `paper-reading-experiment-design` when the problem is real but the executable study route is unclear.
+- Use `paper-reading-experiment-design` when the problem is real but the executable study route or reviewer-objection coverage is unclear.
 
 ## Problem Reality Verdict
 

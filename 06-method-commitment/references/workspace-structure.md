@@ -44,6 +44,6 @@ Only one status-specific output artifact should exist for the current final stat
 
 ## Relationship To Later Workflows
 
-Only `committed_method_design.md` is a normal source for experiment design, research-framing, or risk-objection workflows. Baseline and metric selection are part of experiment design.
+Only `committed_method_design.md` is a normal source for experiment design or research-framing workflows. Baseline and metric selection are part of experiment design.
 
 If the status is `provisionally-committed`, `needs-redesign`, or `reject-current-method`, the summary must include do-not-route warnings and the blocking reason.

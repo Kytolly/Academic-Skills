@@ -8,6 +8,8 @@ Claim-Evidence Map: `claim_evidence_map.md`
 
 Design Status: committed / research-question-level / provisional
 
+Experiment Design Review User Decision: not reviewed / confirmed / explicitly delegated / mixed
+
 ## Experiment Stack
 
 | Layer | Included? | Claim IDs | Rationale | Artifact Sections |
@@ -139,11 +141,23 @@ What failure analysis can change:
 
 - claim wording / method boundary / ablation interpretation / baseline inclusion / metric validity / future work
 
+## Experiment Design Review Packets
+
+Use one row per reviewed design decision.
+
+| Packet ID | Decision Area | Claim Or Experiment IDs | Recommendation | User Decision | Resulting Update | Packet Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| RP1 | Experiment Stack / task or protocol / baseline pressure / metric validity / ablation or control / Result Interpretation Contract | {IDs} | {Recommendation} | confirmed / explicitly delegated / revised / not reviewed | {Update made after user response} | draft / needs revision / accepted / provisional |
+
 ## Experiment Design Review Gate
 
 Gate status:
 
-- passed / explicitly delegated / needs revision / blocked
+- draft / needs revision / blocked / passed
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
 
 Accepted or delegated decisions:
 

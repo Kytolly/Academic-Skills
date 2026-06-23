@@ -39,4 +39,4 @@ A Method Inspiration Workspace is derived from exactly one field context and may
 
 This workspace does not contain a Committed Method Design.
 
-Later experiment design, research-framing, or risk-objection workflows should use a human-owned Committed Method Design as their main source. Baseline and metric selection are part of experiment design. Candidate Methods may inform that design, but they should not be treated as the paper's actual method.
+Later experiment design or research-framing workflows should use a human-owned Committed Method Design as their main source. Baseline and metric selection are part of experiment design. Candidate Methods may inform that design, but they should not be treated as the paper's actual method.

@@ -29,23 +29,35 @@ Use `references/workspace-structure.md` for the artifact layout.
 ## Core Workflow
 
 1. Locate the source method or source research question.
-2. Pass the Experiment Design Source Gate.
+2. Pass the Experiment Design Source Gate with a small source decision packet.
 3. Create or resume an experiment folder at `{workspace-root}/experiment-designs/{field-slug}/{method-or-question-slug}/`.
 4. Write or update `source_experiment_context.md`.
 5. Read the source artifact and relevant local context before decomposing claims.
 6. If the source is not a Committed Method Design, write a Minimal Experiment Brief and mark every downstream artifact as provisional.
 7. Decompose the Method Thesis, Mechanistic Claim, target outcomes, assumptions, and downstream pressure points into `claim_evidence_map.md`.
-8. Pass the Claim-Evidence Review Gate before searching for benchmarks, baselines, or metrics.
+8. Pass the Claim-Evidence Review Gate one core claim at a time before searching for benchmarks, baselines, or metrics.
 9. Select evidence routes and an Experiment Stack for the key claims.
 10. Search or inspect papers for tasks, datasets, evaluation settings, human-evaluation instruments, user-study patterns, and prior protocols that can test the claims.
 11. Write `experiment_design.md` with the proposed tasks, data, protocol, comparisons, human evaluation or user study plan when needed, expected evidence, reviewer-objection coverage, and result interpretation contract.
 12. Write `baseline_pressure_matrix.md`, choosing baselines that fairly pressure-test the method rather than merely filling a list.
 13. Write `claim_metric_map.md`, mapping each key claim to observables, metrics, measurement protocol, validity risks, and failure interpretation.
 14. Write `ablation_and_controls.md`, including component ablations, confound checks, stress tests, and negative or sanity checks.
-15. Pass the Experiment Design Review Gate before treating the plan as final rather than provisional.
+15. Pass the Experiment Design Review Gate through small review packets before treating the plan as final rather than provisional.
 16. Stop when the user can draft the experiment section and justify why the design tests the paper's key claims.
 
 If an experiment folder already exists, read the current artifacts first. Preserve user edits and update existing files instead of overwriting them blindly.
+
+## Interaction Rules
+
+This is a stepwise workflow, not a one-shot artifact generator. Ask one bounded decision packet at a time, provide the recommended answer, wait for the user's confirmation, revision, or explicit delegation, then update the relevant artifact before moving to dependent decisions.
+
+Use concise decision packets. A packet should show only the decision now needed, why it matters, the recommended answer, and the consequence of accepting it. Do not ask the user to approve a whole artifact when one unresolved decision would redirect downstream work.
+
+Do not treat silence, time pressure, or a broad opening instruction such as "you decide" as approval for every later gate. Delegation counts only after the user has seen the specific gate or packet recommendation. Delegation is scoped to that gate or packet and must be recorded in the relevant artifact.
+
+If the user explicitly asks for a fully automatic run, produce only a provisional experiment sketch. The artifacts may organize likely claims, routes, baselines, metrics, and ablations, but they must not be presented as a final experiment plan. Record which gates were not reviewed and which high-risk choices remain delegated or unresolved.
+
+Artifacts may be drafted before a gate passes, but downstream artifacts must not look final or drive later choices until the relevant gate record is updated. In gate records, keep the distinction lightweight but explicit: `passed` means the gate can continue; `confirmed`, `explicitly delegated`, `mixed`, or `not reviewed` describe the user's decision mode.
 
 ## Source Gate
 
@@ -57,7 +69,19 @@ Allowed sources:
 - Research Question Card with a concrete possible study
 - Source Problem Brief or rough method, only if the user explicitly wants a provisional experiment sketch
 
-The gate is passed only when `source_experiment_context.md` records:
+The Source Gate uses a small source decision packet. If there is one clear Committed Method Design, show only:
+
+- source artifact path
+- source status
+- one-sentence Method Thesis or research question
+- one-sentence Mechanistic Claim, if available
+- target failure and intervention point
+- inherited evidence gaps or do-not-route warnings
+- recommended routing: proceed, proceed provisionally, or route back to method commitment
+
+If there are multiple possible sources, ask the user to choose exactly one. If the source lacks a stable Method Thesis, Mechanistic Claim, target failure, intervention point, or target outcome, stop and recommend method commitment rather than starting experiment design from a rough natural-language method description.
+
+The gate is passed only after the user confirms or explicitly delegates the source decision packet and `source_experiment_context.md` records:
 
 - source artifact path or user-provided source
 - source status: committed / research-question / provisional
@@ -138,6 +162,18 @@ Every later task, baseline, metric, and ablation should trace back to at least o
 
 Before searching for benchmarks, baselines, or metrics, ask the user to confirm, revise, or explicitly delegate the Claim-Evidence Map. The gate is passed only when the key claims and evidence routes are explicit enough that later choices can be traced back to them.
 
+Do not show the whole Claim-Evidence Map and ask for one approval. Present one core claim decision packet at a time. Each packet should include:
+
+- the core claim and source section
+- the proposed evidence route
+- what the route can prove
+- what the route cannot prove
+- main proxy or construct-mismatch risk
+- reviewer objection answered
+- recommended decision: accept, narrow the claim, change the route, mark an evidence gap, or ask a high-risk challenge
+
+Low-risk claims may be grouped only when they share the same evidence route and have no distinct proxy or target-failure risk.
+
 Use live challenge questions for high-risk claim decisions, especially when:
 
 - a performance metric is being used as evidence for a mechanism claim
@@ -145,6 +181,8 @@ Use live challenge questions for high-risk claim decisions, especially when:
 - the target failure is not exposed by the proposed task
 - the claim requires a human evaluation or user study but the route is being avoided
 - the evidence route would only show a narrow improvement while the claim is broad
+
+Ask one high-risk challenge at a time. Each challenge should state the skeptical claim, hidden assumption, why the current route may fail, the recommended answer, and the consequence of accepting or revising the route. Wait for the user's response or explicit delegation before marking that claim's route accepted.
 
 Record the user's response or explicit delegation in `claim_evidence_map.md`.
 
@@ -288,6 +326,15 @@ At minimum, cover:
 
 Before presenting the artifacts as a final experiment plan, ask the user to confirm, revise, or explicitly delegate the experiment design decisions. This is a workflow validation gate, not a human evaluation experiment.
 
+Do not wait until all artifacts are finished and ask for one approval. Review the plan through small packets in dependency order:
+
+1. Experiment Stack: included and intentionally omitted layers.
+2. Task, dataset, workload, or protocol choices: whether each setting exposes the target failure and what it cannot test.
+3. Baseline pressures: required, optional, and rejected baselines, especially close work and component-equivalent baselines.
+4. Metric validity: primary and diagnostic metrics, construct mismatch, and proxy risk for each core claim.
+5. Ablations and controls: which tests actually pressure the Mechanistic Claim or named assumptions.
+6. Result Interpretation Contract: what result patterns would force claim narrowing, method revision, or paper-story changes.
+
 The gate is passed only when the user accepts or delegates:
 
 - the key claim decomposition
@@ -299,6 +346,16 @@ The gate is passed only when the user accepts or delegates:
 - result interpretation contract and failure implications
 
 If the user rejects a key decision, update the affected artifact immediately before continuing. If the user delegates, record the delegation and keep the design status `provisional` unless the source method is committed and no unresolved gate issue remains.
+
+## Hard Confirmation Gates
+
+Do not skip these gates:
+
+1. **Source confirmed**: do not decompose claims until exactly one source is selected through the Source Gate, unless the user explicitly asks for a provisional experiment sketch.
+2. **Claim-Evidence reviewed**: do not search for benchmarks, baselines, metrics, datasets, human-evaluation instruments, or prior protocols until the core claims and evidence routes are confirmed or explicitly delegated claim by claim.
+3. **Experiment design reviewed**: do not present the artifacts as a final experiment plan until the Experiment Stack, task/protocol choices, baseline pressures, metric validity, ablations and controls, and Result Interpretation Contract have been reviewed through decision packets.
+
+If a gate is delegated, record it as the user's decision mode rather than rewriting it as confirmed. If a gate is unreviewed because the user requested a fully automatic run, keep the output provisional.
 
 ## Output Artifacts
 
@@ -345,6 +402,6 @@ Stop when every key claim has:
 - a clear failure interpretation
 - an evidence-strength label
 - a reviewer-objection mapping where relevant
-- a passed or explicitly delegated review-gate decision
+- a recorded review-gate decision showing whether the gate passed and whether the user confirmed, delegated, or left the decision provisional
 
 The user should be able to draft the experiment section as `Claim -> Setting -> Baseline -> Metric -> Expected Evidence -> Failure Interpretation`.

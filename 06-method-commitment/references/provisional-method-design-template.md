@@ -18,7 +18,7 @@ Method Decision Log: `method_decision_log.md`
 
 ## Do-Not-Route Warning
 
-This design is not a normal source for experiment design, research-framing, or risk-objection workflows until blockers are resolved and Explicit Method Commitment Confirmation is obtained. Baseline and metric selection should wait until the method can enter experiment design.
+This design is not a normal source for experiment design or research-framing workflows until blockers are resolved and Explicit Method Commitment Confirmation is obtained. Baseline and metric selection should wait until the method can enter experiment design.
 
 ## Provisional Method Thesis
 
@@ -32,7 +32,7 @@ By introducing {mechanism} at {intervention point}, the method aims to improve {
 
 | Blocker | Why It Blocks Downstream | Required Resolution | Suggested Next Workflow |
 | --- | --- | --- | --- |
-| {Blocker} | {Reason} | {Resolution} | research-framing / experiment-design / risk-objection / user decision / other |
+| {Blocker} | {Reason} | {Resolution} | research-framing / experiment-design / user decision / other |
 
 ## Nearly Stable Design
 

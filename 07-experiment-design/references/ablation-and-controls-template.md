@@ -65,6 +65,20 @@ Risk of misleading interpretation:
 | Compute or tool budget mismatch | Yes / No / N/A | {Control} | {Risk} |
 | Distribution mismatch | Yes / No / N/A | {Control} | {Risk} |
 
+## Ablation And Control Review Record
+
+Review status:
+
+- draft / needs revision / accepted / provisional
+
+User decision:
+
+- not reviewed / confirmed / explicitly delegated / mixed
+
+Open issues:
+
+- None / {Issue}
+
 ## Revision Log
 
 | Version | Change | Reason |

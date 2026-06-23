@@ -30,7 +30,7 @@ Downstream-ready:
 
 Next recommended workflow:
 
-- paper-reading-experiment-design / paper-reading-research-framing / paper-reading-risk-objection / paper-reading-method-inspiration / user decision / none
+- paper-reading-experiment-design / paper-reading-research-framing / paper-reading-method-inspiration / user decision / none
 
 Do-not-route warnings:
 

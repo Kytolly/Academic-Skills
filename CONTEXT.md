@@ -285,7 +285,7 @@ A possible method design assembled from Method Patterns, recording its method th
 _Avoid_: Final method, implementation plan, idea sketch
 
 **Committed Method Design**:
-A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design, research-framing, or risk-objection workflows. Baseline and metric selection now belong inside the Experiment Design Workflow.
+A human-owned method design with `committed` Method Commitment Status, stable enough to serve as the source method for experiment design or research-framing workflows. Baseline and metric selection now belong inside the Experiment Design Workflow.
 _Avoid_: Candidate Method, provisionally committed method, agent-generated method, real method
 
 **Method Thesis**:
@@ -324,17 +324,45 @@ _Avoid_: Separate baseline workflow, separate metric workflow, benchmark list, m
 The required routing step before an Experiment Design Workflow begins; it is passed only when the source artifact, source status, key claims, target outcome, target failure, intervention point, scope boundaries, and inherited do-not-route warnings are explicit. A Committed Method Design is the normal source; rough methods or Research Question Cards produce provisional experiment designs.
 _Avoid_: Implicit source, hidden provisional status, using blocked method designs as normal sources
 
+**Experiment Source Decision Packet**:
+A bounded Source Gate confirmation unit that identifies exactly one candidate experiment source, its source status, Method Thesis or research question, Mechanistic Claim when available, target failure, intervention point, inherited warnings, and recommended routing. It does not preview benchmarks, baselines, metrics, or protocol choices.
+_Avoid_: Source-free experiment start, rough method prompt, early benchmark discussion
+
 **Minimal Experiment Brief**:
 A provisional source-context record used when Experiment Design starts from a Research Question Card, Source Problem Brief, rough method, or non-committed source, naming the Method Thesis or question, Mechanistic Claim if available, target failure, intervention point, scope, non-goals, weakest link, main reviewer objection, and provisional status.
 _Avoid_: Method commitment substitute, final experiment context, hidden rough source
+
+**Provisional Experiment Sketch**:
+An automatically generated or under-confirmed experiment design draft that may organize likely claims, routes, baselines, metrics, and ablations, but has not passed the required Experiment Design gates and must not be treated as a final experiment plan.
+_Avoid_: Final experiment design, confirmed protocol, validation plan
 
 **Claim-Evidence Map**:
 A durable artifact in an Experiment Design Workflow that decomposes the Method Thesis, Mechanistic Claim, assumptions, and target outcomes into the observable evidence needed to support or reject each claim, including evidence routes, evidence strength, reviewer objections, and failure interpretations.
 _Avoid_: Dataset-first experiment plan, ungrounded metric list, vague validation idea
 
+**Claim-Evidence Decision Packet**:
+A bounded confirmation unit for one core claim in a Claim-Evidence Review Gate, showing the claim, source, proposed evidence route, what the route can and cannot prove, proxy risk, and the agent's recommended decision.
+_Avoid_: Full-map approval, hidden route choice, oversized confirmation prompt
+
+**High-Risk Claim Challenge**:
+A live challenge inside the Claim-Evidence Review Gate that tests one risky claim-to-evidence decision before the claim's evidence route can be accepted, especially when the route relies on a weak proxy, misses the target failure, or avoids needed human evidence.
+_Avoid_: Generic concern, optional reviewer note, post-hoc limitation
+
 **Claim-Evidence Review Gate**:
-The required confirmation step before benchmark, baseline, metric, or protocol selection begins; it is passed only when the user confirms, revises, or explicitly delegates the key claim decomposition and evidence routes.
+The required confirmation step before benchmark, baseline, metric, or protocol selection begins; it proceeds through Claim-Evidence Decision Packets and required High-Risk Claim Challenges, and is passed only after the key claim decomposition and evidence routes are reviewable and the user's decision is recorded.
 _Avoid_: Silent claim decomposition, dataset-first routing, hidden proxy choice
+
+**Stepwise Gate Confirmation**:
+A workflow confirmation pattern where the agent presents one bounded decision packet, gives a recommended answer, and waits for the user to confirm, revise, or explicitly delegate before moving to dependent decisions.
+_Avoid_: Batch approval, implied delegation, one-shot workflow run
+
+**Gate-Scoped Delegation**:
+An explicit user delegation that applies only to the named gate or decision packet currently under review, after the agent has shown the relevant decisions and recommendation. It cannot carry across workflow gates or silently waive High-Risk Claim Challenges.
+_Avoid_: Blanket delegation, inherited approval, silent challenge waiver
+
+**Gate-Bound Artifact Drafting**:
+A workflow writing pattern where artifacts may be drafted before a gate passes, but dependent downstream artifacts cannot be finalized or treated as accepted until the relevant gate status and user decision are recorded.
+_Avoid_: Final-looking drafts, downstream artifact leapfrogging, delayed gate record
 
 **Evidence Route**:
 The kind of study or analysis chosen to support or refute a claim, such as standard benchmark, targeted workload, synthetic controlled task, real-world case study, ablation, stress test, human evaluation, user study, or error analysis.
@@ -364,8 +392,12 @@ _Avoid_: Decorative ablation list, one-off component removal, unchecked leakage 
 A pre-results agreement in an Experiment Design Workflow that states what major success, failure, proxy mismatch, ablation, baseline, or human-evaluation result patterns would imply for the claim, method, or paper story.
 _Avoid_: Post-hoc explanation, success-only expectation, result summary
 
+**Experiment Design Review Packet**:
+A bounded confirmation unit inside the Experiment Design Review Gate for one dependent design decision, such as the Experiment Stack, task or dataset protocol, baseline pressure, metric validity, ablations and controls, or Result Interpretation Contract.
+_Avoid_: Final-bundle approval, all-artifact approval, hidden design dependency
+
 **Experiment Design Review Gate**:
-The final confirmation step before an Experiment Design Workflow treats its artifacts as a final experiment plan; it is passed only when the user confirms, revises, or explicitly delegates the claim decomposition, evidence routes, experiment stack, baselines, metrics, ablations, controls, and result interpretations.
+The final confirmation step before an Experiment Design Workflow treats its artifacts as a final experiment plan; it proceeds through Experiment Design Review Packets in dependency order and is passed only when the claim decomposition, evidence routes, experiment stack, baselines, metrics, ablations, controls, and result interpretations are accepted and the user's decision is recorded.
 _Avoid_: Silent final plan, agent-owned experiment design, human evaluation study
 
 **Research Framing Workflow**:
@@ -486,7 +518,7 @@ Dev: "Should `field map` just output `research_clusters.md`?"
 
 Domain expert: "No. Use **Field Map Workflow** for the full process. It creates one **Field Map Workspace**, starts with the **Field Boundary**, uses **Seed Papers** to expand the literature set, groups papers into **Research Clusters**, and ends by naming **Research Opportunities**."
 
-Dev: "Should we run a `risk objection` pass on all three question cards?"
+Dev: "Should we run a broad reviewer-objection pass on all three question cards?"
 
 Domain expert: "Not for problem motivation. Use a **Problem Reality Check** after the **Source Card Gate** selects exactly one **Research Question Card**. The check asks one **Challenge Question** at a time, records an **Interrogation Transcript**, then writes one **Problem Reality Check Report**, assigns a **Problem Reality Verdict**, flags **Unsafe Motivation Claims**, and records **Targeted Evidence Needs** without launching a new paper search."
 
@@ -538,9 +570,41 @@ Dev: "Can Experiment Design start by finding common benchmarks, baselines, and m
 
 Domain expert: "No. Use the **Experiment Design Source Gate**, then write a **Claim-Evidence Map** and pass the **Claim-Evidence Review Gate** first. Choose **Evidence Routes**, an **Experiment Stack**, a **Baseline Pressure Matrix**, and a **Claim-Metric Map** only after the claims and reviewer objections are explicit."
 
+Dev: "Can Experiment Design proceed from a rough natural-language method description?"
+
+Domain expert: "Only provisionally. Prefer a **Committed Method Design** and confirm it through an **Experiment Source Decision Packet**. If the Method Thesis, **Mechanistic Claim**, target failure, or intervention point is not stable, route back to **Method Commitment Workflow**."
+
+Dev: "Can the Claim-Evidence Review Gate show the whole map and ask for one approval?"
+
+Domain expert: "No. Use **Claim-Evidence Decision Packets** so each core claim's evidence route, proxy risk, and reviewer objection can be confirmed or revised before dependent benchmark, baseline, metric, and protocol choices begin."
+
+Dev: "If a core claim's evidence route is risky, can the packet still just ask for approval?"
+
+Domain expert: "No. Ask a **High-Risk Claim Challenge** first. The researcher must answer or explicitly delegate the risky claim-to-evidence decision before that route can anchor later protocol, baseline, or metric choices."
+
 Dev: "Can the agent silently finalize the experiment plan after filling the artifacts?"
 
 Domain expert: "No. The **Experiment Design Review Gate** requires the researcher to confirm, revise, or explicitly delegate the claim decomposition, evidence routes, baselines, metrics, ablations, controls, and **Result Interpretation Contract**. This gate is about workflow ownership; it is not the same as a human evaluation or user study."
+
+Dev: "Can the Experiment Design Review Gate wait until all artifacts are drafted and then ask for one approval?"
+
+Domain expert: "No. Use **Experiment Design Review Packets** in dependency order: first the **Experiment Stack**, then task and protocol choices, baseline pressures, metric validity, ablations and controls, and finally the **Result Interpretation Contract**."
+
+Dev: "Can Experiment Design ask for one big approval after drafting everything?"
+
+Domain expert: "No. Use **Stepwise Gate Confirmation**: present one bounded decision packet with a recommended answer, wait for confirmation, revision, or explicit delegation, then continue to dependent choices."
+
+Dev: "If the researcher says 'you decide' at the start, can that approve every later gate?"
+
+Domain expert: "No. Treat delegation as **Gate-Scoped Delegation**. It applies only to the named gate or packet after the researcher has seen the recommendation, and it cannot silently waive a **High-Risk Claim Challenge**."
+
+Dev: "If the researcher asks the agent to run Experiment Design fully automatically, can the result be final?"
+
+Domain expert: "No. A fully automatic run can produce only a **Provisional Experiment Sketch**. The sketch may organize likely choices, but unreviewed choices must not be silently treated as confirmed."
+
+Dev: "Can the workflow draft all experiment files first and fill in gate records afterward?"
+
+Domain expert: "No. Use **Gate-Bound Artifact Drafting**. Drafts can capture proposed decisions, but downstream files cannot look final or drive later choices until the relevant gate status and user decision are recorded."
 
 Dev: "Does `committed` mean the method is already correct?"
 

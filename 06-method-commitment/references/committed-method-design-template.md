@@ -150,7 +150,7 @@ These must be non-blocking for downstream routing.
 
 Recommended next workflow:
 
-- paper-reading-experiment-design / paper-reading-research-framing / paper-reading-risk-objection / other
+- paper-reading-experiment-design / paper-reading-research-framing / other
 
 Routing rationale:
 
