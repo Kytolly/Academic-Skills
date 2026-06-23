@@ -556,6 +556,38 @@ _Avoid_: Proof, justification text, invented support
 A zero-build static HTML report inside a Field Map Workspace that organizes the boundary, seed set, search strategy, clusters, paper table, opportunities, and next actions for human reading.
 _Avoid_: Web app, dashboard
 
+**Workspace Presentation**:
+A curated, interactive presentation artifact generated from exactly one source workspace or one source chain for review, handoff, rereading, or continuing the research. It treats source artifacts as the facts of record, uses a Derived Presentation Layer to decide which files and sections deserve user-facing display, foregrounds the current research state, key judgments, evidence, risks, and next actions, and preserves links or previews for the complete source files rather than becoming a second editable copy.
+_Avoid_: Full workspace dump, multi-workspace collage, replacement for source artifacts, workspace editor, slide deck
+
+**Derived Presentation Layer**:
+An agent-generated, source-linked display layer inside a Workspace Presentation that selects, condenses, or reorganizes source artifacts so users can quickly understand the research state without reading every process file. It may summarize cumbersome artifacts, but it must keep source links visible and must not become the editable facts of record.
+_Avoid_: New source artifact, hidden rewrite, unsourced summary, direct workspace edit
+
+**Primary Display Artifact**:
+A source artifact that should be shown directly in a Workspace Presentation because it contains final or near-final user-facing research state rather than internal process detail.
+_Avoid_: Every markdown file, hidden process note
+
+**Summarize-Then-Link Artifact**:
+A source artifact that contains important decisions, evidence, or risks but is too process-heavy or cumbersome for default direct display, so the Derived Presentation Layer summarizes it and links to the source file.
+_Avoid_: Hidden decision record, copied full transcript, unsourced condensation
+
+**Link-Only Artifact**:
+A source artifact that is template-like, mechanical, repetitive, provisional, or mainly useful for audit, so it is linked or tucked into a source-file drawer without becoming a main reading module.
+_Avoid_: Deleted artifact, ignored source, primary reading section
+
+**Presentation Display Map**:
+The workflow-specific rule set that classifies source artifacts as Primary Display, Summarize-Then-Link, or Link-Only and orders them into the Workspace Presentation sections a user should read.
+_Avoid_: Ad hoc page layout, full file listing, hidden display judgment
+
+**Presentation Module Summary**:
+A source-linked, agent-generated summary for one presentation module, combining short prose with lightweight extracted fields so a Workspace Presentation can show decisions, evidence, risks, and next actions in scannable form.
+_Avoid_: Source artifact rewrite, free-floating summary, strict parser output
+
+**Presentation Source Gate**:
+A lightweight confirmation step before generating a Workspace Presentation, fixing exactly one source workspace or source chain, the presentation slug, detected workflow coverage, output path, update mode, and major display modules.
+_Avoid_: Research workflow gate, broad workspace scan, accidental presentation source
+
 ## Example Dialogue
 
 Dev: "Should `field map` just output `research_clusters.md`?"
@@ -689,3 +721,11 @@ Domain expert: "No. Build and confirm the **Close Work Set** through the **Close
 Dev: "Can the framing package say the method improves safety if the experiments are only planned?"
 
 Domain expert: "No. Respect the **Result Claim Boundary**. Without actual results, planned evidence belongs in evaluation-intent wording such as 'we evaluate whether...' rather than outcome-achieved empirical claims."
+
+Dev: "Can a presentation bundle every folder under `workspace/` so the user sees everything in one place?"
+
+Domain expert: "No. A **Workspace Presentation** starts from exactly one source workspace or one coherent source chain. Use the **Presentation Source Gate** to fix the source, slug, output path, update mode, and major modules before generating the presentation."
+
+Dev: "Can the presentation rewrite long process files into a cleaner final artifact?"
+
+Domain expert: "No. Use a **Derived Presentation Layer** with **Presentation Module Summaries** for cumbersome process files, but keep source artifacts as the facts of record. Classify files with the **Presentation Display Map** as **Primary Display Artifacts**, **Summarize-Then-Link Artifacts**, or **Link-Only Artifacts**, and keep source links visible."

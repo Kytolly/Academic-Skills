@@ -27,13 +27,19 @@
 │   └── SKILL.md
 ├── 07-experiment-design/
 │   └── SKILL.md
-└── 08-research-framing/
-    └── SKILL.md
+├── 08-research-framing/
+│   └── SKILL.md
+└── workspace-presentation/
+    ├── SKILL.md
+    ├── references/
+    └── templates/react-vite/
 ```
 
 ## 使用方式
 
 阅读开始前，先用一两个问题明确当前阅读动机，再直接选择对应编号的动机 skill。若动机还不清楚，可以先对照下方“阅读动机”表格判断：这次阅读最需要产出什么，以及读到什么程度就可以停。
+
+本仓库通过 `.codex/skills/` 中的相对链接让 Codex 自动发现这些 skill；展示层工具入口是 `.codex/skills/workspace-presentation`，指向仓库内的 `workspace-presentation/`。
 
 后续每个动机 skill 会逐步补充：
 
@@ -57,6 +63,10 @@
 | 06 | 确定方法设计 | method commitment outcome | 方法启发之后，研究者准备认领、稳定或阻断自己的方法 |
 | 07 | 寻找实验设计 | experiment plan / baseline pressure matrix / claim-metric map | 方法基本确定，需要证明 claim、选择 baseline 和指标 |
 | 08 | 形成论文表达 / 研究定位 / 引用支撑 | research framing package / provisional framing sketch | 唯一研究链路已经稳定到某个叶子节点，准备写 introduction、related work、proposal 或 paper |
+
+## 展示层工具
+
+`workspace-presentation` 不是新的研究阶段，而是把已有 workspace 或 source chain 打包成可交互前端阅读界面的展示层 skill。它从 exactly one source workspace / source chain 生成 `workspace/presentations/{presentation-slug}/`，使用 React/Vite 模板、manifest、source index 和 agent 生成的模块摘要来展示当前研究状态、关键判断、证据、风险和下一步，同时保留原始 markdown 源文件链接。
 
 ## 核心使用场景
 
@@ -141,3 +151,13 @@
 这里的产品设计是把三件事合并成 Research Framing Workflow。它先确认 exactly one Research Framing Source Chain，并优先使用链上最深稳定的 leaf source：如果已经有 reviewed experiment design，就从实验计划回溯到 method 和 question；如果只有 committed method 或 research question，则只能形成 provisional framing sketch。之后它先从本地实验设计和 baseline pressure matrix 继承 close-work 压力，再建立 3-8 个 Close Work Set，把它们当成 novelty 和 reviewer comparison 的威胁列表，而不是泛 related work。
 
 阅读这些相似工作时同时抽取 claim support、positioning matrix、story spine、contribution highlights 和 writing moves，但最终交付不是材料堆。Research framing package 固定为 8 个部分：source research summary、one-sentence paper pitch、story spine、close work set、positioning matrix、claim support bank、safe claims / claims to avoid、paper writing blueprint。它说明论文故事、相似工作边界、可写 claim、不可过度声称的地方、差异化表述，以及下一步可以直接进入 introduction 和 related work 的写作结构。
+
+### Workspace Presentation：把研究 workspace 变成可浏览的交互界面
+
+适用场景：你已经通过前面的一个或多个 paper-reading workflow 形成了比较完整的 source workspace 或 source chain，现在需要把这些材料拿来复盘、交接、和导师讨论、给合作者快速浏览，或者隔一段时间后重新进入同一个研究状态。这个阶段的核心需求不是继续产生新的研究判断，而是让已有判断、证据、风险和下一步以更低摩擦的方式被看见。
+
+常见做法是直接打开一堆 markdown，或者让 AI 再总结一次整个 workspace。前者的问题是阅读负担太重，过程文件、最终产物、引用依据和临时记录混在一起；后者的问题是 summary 很容易脱离源文件，变成一个看起来清楚但难以追溯的新版本，久而久之反而破坏 source artifacts 作为事实记录的地位。
+
+这里的产品设计是把展示层和研究层分开。`workspace-presentation` 先通过 Presentation Source Gate 固定 exactly one source workspace 或 source chain，再把源文件分类成 Primary Display、Summarize-Then-Link 和 Link-Only，最后生成 `workspace/presentations/{presentation-slug}/` 下的 React/Vite 前端。展示界面可以重组阅读顺序、压缩过程材料、突出关键判断，但每个模块都保留 source index 和原始 markdown 链接。
+
+这样做的优势是，workspace 不需要被整理成另一个“最终文档”才能被人读懂。用户最后得到的是一个可交互、可交接、可回溯的研究状态界面：它把当前链路讲清楚，又不替代源文件；它能帮人快速进入研究上下文，又能在关键判断处回到原始证据。它特别适合阶段性汇报、研究交接、长周期项目复盘，以及把 paper-reading skills 的输出转成更适合人类浏览的界面。
