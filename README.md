@@ -56,7 +56,7 @@
 | 05 | 寻找方法启发 | 方法候选库 | 问题初步确定，正在设计方法 |
 | 06 | 确定方法设计 | method commitment outcome | 方法启发之后，研究者准备认领、稳定或阻断自己的方法 |
 | 07 | 寻找实验设计 | experiment plan / baseline pressure matrix / claim-metric map | 方法基本确定，需要证明 claim、选择 baseline 和指标 |
-| 08 | 形成论文表达 / 研究定位 / 引用支撑 | research framing package | 问题、方法或实验主张稳定，准备写 introduction、related work、proposal 或 paper |
+| 08 | 形成论文表达 / 研究定位 / 引用支撑 | research framing package / provisional framing sketch | 唯一研究链路已经稳定到某个叶子节点，准备写 introduction、related work、proposal 或 paper |
 
 ## 核心使用场景
 
@@ -134,8 +134,10 @@
 
 ### 08 形成论文表达：把当前研究放进相似工作的比较框架里
 
-适用场景：你的问题、方法或实验主张已经比较稳定，现在需要把它写成一篇论文能成立的样子：故事怎么讲，最相近的工作是谁，差异在哪里，哪些 claim 有引用支撑，哪些出彩点值得放到 introduction、related work 或 proposal 里。
+适用场景：你的研究已经形成一条唯一链路，比如 Research Question Card -> Committed Method Design -> Experiment Design，现在需要把它写成一篇论文能成立的样子：故事怎么讲，最相近的工作是谁，差异在哪里，哪些 claim 有引用支撑，哪些出彩点值得放到 introduction、related work 或 proposal 里。
 
 原来“引用支撑”“定位差异化”“学习写作套路”看起来像三个动作，但真实写作时它们通常绑在一起发生。你不会脱离相似研究去判断某个 claim 是否该写，也不会脱离 close work 去学 gap 怎么包装；所谓写作套路，本质上也是观察别人如何把自己的贡献放进已有研究之间。
 
-这里的产品设计是把三件事合并成 Research Framing Workflow。它先确认当前研究源，例如 Research Question Card、Committed Method Design、实验计划或草稿，再建立 Close Work Set。阅读这些相似工作时同时抽取 claim support、positioning matrix、story spine、contribution highlights 和 writing moves。用户最后拿到的不是零散素材，而是一份 research framing package：它说明论文故事、相似工作边界、可写 claim、不可过度声称的地方、差异化表述和可迁移的写作结构。
+这里的产品设计是把三件事合并成 Research Framing Workflow。它先确认 exactly one Research Framing Source Chain，并优先使用链上最深稳定的 leaf source：如果已经有 reviewed experiment design，就从实验计划回溯到 method 和 question；如果只有 committed method 或 research question，则只能形成 provisional framing sketch。之后它先从本地实验设计和 baseline pressure matrix 继承 close-work 压力，再建立 3-8 个 Close Work Set，把它们当成 novelty 和 reviewer comparison 的威胁列表，而不是泛 related work。
+
+阅读这些相似工作时同时抽取 claim support、positioning matrix、story spine、contribution highlights 和 writing moves，但最终交付不是材料堆。Research framing package 固定为 8 个部分：source research summary、one-sentence paper pitch、story spine、close work set、positioning matrix、claim support bank、safe claims / claims to avoid、paper writing blueprint。它说明论文故事、相似工作边界、可写 claim、不可过度声称的地方、差异化表述，以及下一步可以直接进入 introduction 和 related work 的写作结构。

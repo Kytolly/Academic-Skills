@@ -401,40 +401,84 @@ The final confirmation step before an Experiment Design Workflow treats its arti
 _Avoid_: Silent final plan, agent-owned experiment design, human evaluation study
 
 **Research Framing Workflow**:
-A downstream paper-reading workflow that turns one stable current research source into paper-facing expression by comparing closest related works, checking claim-level citation support, clarifying positioning, identifying contribution highlights, and extracting reusable writing moves.
+A downstream paper-reading workflow that turns one stable Research Framing Source Chain into paper-facing expression by comparing closest related works, checking claim-level citation support, clarifying positioning, identifying contribution highlights, and extracting reusable writing moves.
 _Avoid_: Citation support as a separate workflow, positioning-only check, writing-style collection, broad related-work scan
 
+**Research Framing Source Chain**:
+The exactly one upstream research lineage selected for a Research Framing Workflow, usually ending at a reviewed Experiment Design and tracing back through its source method and source question when present. The chain may be entered through its leaf artifact, but framing must not bundle multiple alternative questions, methods, or experiments as coequal sources.
+_Avoid_: Source collage, experiment-only pointer, all upstream artifacts as separate sources
+
+**Research Framing Leaf Source**:
+The deepest stable artifact currently available in a Research Framing Source Chain, preferred in order from reviewed Experiment Design to Committed Method Design to Research Question Card. A leaf source determines how final or provisional the framing may be.
+_Avoid_: Arbitrary source choice, shallow source when a deeper stable source exists, multiple leaf sources
+
+**Source Chain Trace**:
+The provenance summary inside a Research Framing Package that names the Research Framing Leaf Source, the upstream artifacts it traces through, and the source statuses or gates that make the chain stable or provisional.
+_Avoid_: Current experiment summary, bibliography provenance, hidden workspace lookup
+
+**Research Framing Context Review**:
+The required local-artifact review after the Research Framing Source Gate, preserving the leaf source's claims, evidence routes, baseline pressures, metric validity risks, ablations, unsafe claims, and upstream warnings before building the Close Work Set. When the leaf source is an Experiment Design, the Baseline Pressure Matrix is the primary local source for initial close-work candidates.
+_Avoid_: Clean-slate paper search, ignoring experiment baselines, broad related-work reset
+
 **Research Framing Source Gate**:
-The required routing step before a Research Framing Workflow begins; it is passed only when exactly one current research source, its stable and provisional claims, known close works, writing goal, and scope boundaries are explicit.
+The required routing step before a Research Framing Workflow begins; it is passed only when exactly one Research Framing Source Chain, its stable and provisional claims, known close works, writing goal, and scope boundaries are explicit.
 _Avoid_: Draft polishing without source status, broad paper-writing help, hidden unstable claims
+
+**Close Work Selection Gate**:
+The required Research Framing confirmation step that fixes the 3-8 Close Works and their Close Work Threat Roles before final positioning, story, or claim-safety decisions are made.
+_Avoid_: Hidden close-work choice, convenient citation set, story-first related work
+
+**Story And Claim Safety Gate**:
+The required Research Framing confirmation step before writing the final package, checking the One-Sentence Paper Pitch, novelty boundary, safe claims, claims to avoid, and any claim downgrades required by the Claim Support Bank or Result Claim Boundary.
+_Avoid_: Overclaimed introduction, unchecked novelty boundary, planned evidence as result
 
 **Close Work Set**:
 The 3-8 papers, systems, benchmarks, or methods that most strongly define how the user's current research must be compared, positioned, and cited in a paper.
 _Avoid_: General bibliography, field map cluster, all related work, convenient citations
 
+**Close Work Threat Role**:
+The reason a Close Work belongs in the Close Work Set, such as same-problem work, same-method-family work, same-setting or system work, same-evaluation work, baseline-threat work, or novelty-threat work. One Close Work may fill multiple threat roles, and the set should not be padded just to fill every role.
+_Avoid_: Related-work category, citation theme, one-paper-per-bucket quota
+
 **Claim Support Bank**:
-A durable artifact in a Research Framing Workflow that maps each paper-facing claim to sources that directly support, weakly support, narrow, contradict, or merely background the claim, with safer wording recorded when support is too thin.
+A durable artifact in a Research Framing Workflow that maps each paper-facing claim to sources that directly support, weakly support, narrow, contradict, or merely background the claim, with safer wording recorded when support is too thin. Claim types are motivation, gap, novelty, mechanism, method, evaluation, practical relevance, and limitation.
 _Avoid_: Citation list, bibliography dump, decorative references, unsupported motivation prose
+
+**Result Claim Boundary**:
+The rule that Research Framing must not state outcome-achieved empirical claims before the relevant experiment results exist; planned evidence must be phrased as evaluation intent, expected evidence, or a claim to test.
+_Avoid_: Planned evidence as result, our method improves without results, validation language before validation
 
 **Positioning Matrix**:
 A durable artifact in a Research Framing Workflow that compares the user's work with the Close Work Set across problem, method, setting, assumptions, evidence, contribution type, and novelty boundary.
 _Avoid_: Similarity table, related-work summary, uniqueness proof, baseline selection
 
 **Paper Story Spine**:
-The compact narrative route for the current research, connecting known situation, unresolved tension, close-work limitation, proposed intervention, evidence plan, and contribution highlights.
-_Avoid_: Abstract draft, marketing slogan, generic motivation outline
+The compact narrative route for the current research, connecting known situation, unresolved tension, close-work limitation, proposed intervention, evidence plan, and contribution highlights. It is finalized after the Close Work Set, Positioning Matrix, and Claim Support Bank have constrained what the paper can safely say.
+_Avoid_: Abstract draft, marketing slogan, source-only story, generic motivation outline
+
+**One-Sentence Paper Pitch**:
+The single paper-level sentence that states the central problem or tension, the setting, the proposed method or intervention, and the expected evidence or contribution. It controls the framing emphasis but is not necessarily final abstract prose, and should be constrained by close-work comparison and claim support.
+_Avoid_: Slogan, title, source-only pitch, full abstract, contribution list
 
 **Contribution Highlight**:
 A paper-facing point worth foregrounding because it is both true of the user's current research and differentiating against the Close Work Set.
 _Avoid_: Feature list, overclaim, novelty claim without comparison
 
 **Writing Move Library**:
-A durable artifact in a Research Framing Workflow that extracts reusable rhetorical structures from close papers, such as gap packaging, related-work transitions, contribution lists, limitation handling, and figure or table patterns, without copying prose.
-_Avoid_: Phrase bank, paraphrase source, style mimicry, quote collection
+A durable intermediate artifact in a Research Framing Workflow that extracts reusable rhetorical structures from close papers, such as gap packaging, related-work transitions, contribution lists, limitation handling, and figure or table patterns, without copying prose. Its usable insights are absorbed into the Paper Writing Blueprint rather than presented as a standalone final-package section.
+_Avoid_: Phrase bank, final package section, paraphrase source, style mimicry, quote collection
+
+**Paper Writing Blueprint**:
+The final writing-facing outline in a Research Framing Package, usually covering the introduction route, related-work route, and contribution bullets derived from the story, positioning, claim support, and writing moves.
+_Avoid_: Full paper draft, generic template, raw writing-move notes
 
 **Research Framing Package**:
-The final artifact of a Research Framing Workflow, containing the source research summary, Close Work Set, Claim Support Bank, Positioning Matrix, Paper Story Spine, Contribution Highlights, safe claims, claims to avoid, Writing Move Library, and recommended introduction or related-work outline.
+The final artifact of a Research Framing Workflow, bound to one Research Framing Source Chain and containing the source research summary, One-Sentence Paper Pitch, Paper Story Spine, Close Work Set, Positioning Matrix, Claim Support Bank, safe claims, claims to avoid, and Paper Writing Blueprint.
 _Avoid_: Separate citation bank, separate positioning matrix, separate writing template, polished paper section
+
+**Provisional Framing Sketch**:
+An under-stabilized Research Framing output used when the leaf source is only a Committed Method Design, Research Question Card, proposal draft, user brief, or otherwise lacks a reviewed Experiment Design or equivalent stable experiment plan. It may preview pitch, story, close work, positioning, and safe claims, but must mark missing experiment-backed evidence and must not be treated as a Research Framing Package.
+_Avoid_: Final package, paper-ready framing, hidden provisional status
 
 **Provisional Method Design**:
 The final artifact of a Method Commitment Workflow when the Method Commitment Status is `provisionally-committed`, recording the nearly stable method design together with the Method Commitment Blockers that prevent downstream routing.
@@ -629,3 +673,19 @@ Domain expert: "No. The **Method Commitment Output Artifact** must match the **M
 Dev: "If the status-specific output artifact exists, do we still need a summary?"
 
 Domain expert: "Yes. The **Method Commitment Summary** is always present as the routing index: it names the Source Method, status, output artifact, blockers, next workflow, and do-not-route warnings without replacing the status-specific artifact."
+
+Dev: "Can Research Framing bind the Research Question Card, Committed Method Design, and Experiment Design as three separate sources?"
+
+Domain expert: "No. Select exactly one **Research Framing Source Chain** and use its deepest stable **Research Framing Leaf Source**. If a reviewed Experiment Design exists, enter through that leaf and record a **Source Chain Trace** back to the method and question instead of treating upstream artifacts as coequal sources."
+
+Dev: "Can Research Framing start from a committed method and still produce the final package?"
+
+Domain expert: "Only provisionally. A final **Research Framing Package** normally requires a reviewed Experiment Design or equivalent stable experiment plan. If the leaf source is only a Committed Method Design, Research Question Card, draft, or brief, write a **Provisional Framing Sketch** and mark missing experiment-backed evidence."
+
+Dev: "Should Research Framing write the pitch before checking close work?"
+
+Domain expert: "No. Build and confirm the **Close Work Set** through the **Close Work Selection Gate** first, using **Close Work Threat Roles** rather than a general bibliography. The **One-Sentence Paper Pitch**, **Paper Story Spine**, novelty boundary, and safe claims are finalized later through the **Story And Claim Safety Gate**."
+
+Dev: "Can the framing package say the method improves safety if the experiments are only planned?"
+
+Domain expert: "No. Respect the **Result Claim Boundary**. Without actual results, planned evidence belongs in evaluation-intent wording such as 'we evaluate whether...' rather than outcome-achieved empirical claims."
