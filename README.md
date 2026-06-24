@@ -85,10 +85,10 @@ This pipeline is not strictly linear. Users can start from any stage depending o
 
 For example:
 
-* If the user is new to a field, start with `01-field-map`.
-* If the user already has an idea but is unsure whether it is valid, start with `03-problem-reality-check`.
-* If the user has several candidate methods, start with `06-method-commitment`.
-* If the user already has a stable method and wants to design experiments, start with `07-experiment-design`.
+* If the user is new to a field, start with `skills/01-field-map`.
+* If the user already has an idea but is unsure whether it is valid, start with `skills/03-problem-reality-check`.
+* If the user has several candidate methods, start with `skills/06-method-commitment`.
+* If the user already has a stable method and wants to design experiments, start with `skills/07-experiment-design`.
 
 ---
 
@@ -103,7 +103,7 @@ User goal:
 Recommended skill:
 
 ```text
-01-field-map
+skills/01-field-map
 ```
 
 Expected output:
@@ -126,7 +126,7 @@ User goal:
 Recommended skill:
 
 ```text
-02-research-question
+skills/02-research-question
 ```
 
 Expected output:
@@ -148,7 +148,7 @@ User goal:
 Recommended skill:
 
 ```text
-03-problem-reality-check
+skills/03-problem-reality-check
 ```
 
 Expected output:
@@ -170,7 +170,7 @@ User goal:
 Recommended skill:
 
 ```text
-06-method-commitment
+skills/06-method-commitment
 ```
 
 Expected output:
@@ -193,18 +193,19 @@ git clone https://github.com/snake-fan/Paper-Reading-Skills.git
 cd Paper-Reading-Skills
 ```
 
-Each numbered directory contains one Codex skill:
+Each skill lives under `skills/`:
 
 ```text
-01-field-map/
-02-research-question/
-03-problem-reality-check/
-04-theoretical-grounding/
-05-method-inspiration/
-06-method-commitment/
-07-experiment-design/
-08-research-framing/
-workspace-presentation/
+skills/
+├── 01-field-map/
+├── 02-research-question/
+├── 03-problem-reality-check/
+├── 04-theoretical-grounding/
+├── 05-method-inspiration/
+├── 06-method-commitment/
+├── 07-experiment-design/
+├── 08-research-framing/
+└── workspace-presentation/
 ```
 
 Before using a skill, identify the current research state:
@@ -276,26 +277,27 @@ The project avoids turning weak evidence into strong claims. It records what can
 .
 ├── README.md
 ├── README.zh-CN.md
-├── 01-field-map/
-│   └── SKILL.md
-├── 02-research-question/
-│   └── SKILL.md
-├── 03-problem-reality-check/
-│   └── SKILL.md
-├── 04-theoretical-grounding/
-│   └── SKILL.md
-├── 05-method-inspiration/
-│   └── SKILL.md
-├── 06-method-commitment/
-│   └── SKILL.md
-├── 07-experiment-design/
-│   └── SKILL.md
-├── 08-research-framing/
-│   └── SKILL.md
-└── workspace-presentation/
-    ├── SKILL.md
-    ├── references/
-    └── templates/
+└── skills/
+    ├── 01-field-map/
+    │   └── SKILL.md
+    ├── 02-research-question/
+    │   └── SKILL.md
+    ├── 03-problem-reality-check/
+    │   └── SKILL.md
+    ├── 04-theoretical-grounding/
+    │   └── SKILL.md
+    ├── 05-method-inspiration/
+    │   └── SKILL.md
+    ├── 06-method-commitment/
+    │   └── SKILL.md
+    ├── 07-experiment-design/
+    │   └── SKILL.md
+    ├── 08-research-framing/
+    │   └── SKILL.md
+    └── workspace-presentation/
+        ├── SKILL.md
+        ├── references/
+        └── templates/
 ```
 
 ---

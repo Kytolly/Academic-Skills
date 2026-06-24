@@ -85,10 +85,10 @@ Workspace Presentation
 
 例如：
 
-* 如果用户刚进入一个领域，可以从 `01-field-map` 开始。
-* 如果用户已经有一个 idea，但不确定它是否成立，可以从 `03-problem-reality-check` 开始。
-* 如果用户有多个候选方法，可以从 `06-method-commitment` 开始。
-* 如果用户已经有稳定方法，并希望设计实验，可以从 `07-experiment-design` 开始。
+* 如果用户刚进入一个领域，可以从 `skills/01-field-map` 开始。
+* 如果用户已经有一个 idea，但不确定它是否成立，可以从 `skills/03-problem-reality-check` 开始。
+* 如果用户有多个候选方法，可以从 `skills/06-method-commitment` 开始。
+* 如果用户已经有稳定方法，并希望设计实验，可以从 `skills/07-experiment-design` 开始。
 
 ---
 
@@ -103,7 +103,7 @@ Workspace Presentation
 推荐 skill：
 
 ```text
-01-field-map
+skills/01-field-map
 ```
 
 预期产出：
@@ -126,7 +126,7 @@ Workspace Presentation
 推荐 skill：
 
 ```text
-02-research-question
+skills/02-research-question
 ```
 
 预期产出：
@@ -148,7 +148,7 @@ Workspace Presentation
 推荐 skill：
 
 ```text
-03-problem-reality-check
+skills/03-problem-reality-check
 ```
 
 预期产出：
@@ -170,7 +170,7 @@ Workspace Presentation
 推荐 skill：
 
 ```text
-06-method-commitment
+skills/06-method-commitment
 ```
 
 预期产出：
@@ -193,18 +193,19 @@ git clone https://github.com/snake-fan/Paper-Reading-Skills.git
 cd Paper-Reading-Skills
 ```
 
-每个编号目录都包含一个 Codex skill：
+每个 skill 都位于 `skills/` 目录下：
 
 ```text
-01-field-map/
-02-research-question/
-03-problem-reality-check/
-04-theoretical-grounding/
-05-method-inspiration/
-06-method-commitment/
-07-experiment-design/
-08-research-framing/
-workspace-presentation/
+skills/
+├── 01-field-map/
+├── 02-research-question/
+├── 03-problem-reality-check/
+├── 04-theoretical-grounding/
+├── 05-method-inspiration/
+├── 06-method-commitment/
+├── 07-experiment-design/
+├── 08-research-framing/
+└── workspace-presentation/
 ```
 
 使用 skill 之前，先判断当前研究状态：
@@ -276,26 +277,27 @@ Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该�
 .
 ├── README.md
 ├── README.zh-CN.md
-├── 01-field-map/
-│   └── SKILL.md
-├── 02-research-question/
-│   └── SKILL.md
-├── 03-problem-reality-check/
-│   └── SKILL.md
-├── 04-theoretical-grounding/
-│   └── SKILL.md
-├── 05-method-inspiration/
-│   └── SKILL.md
-├── 06-method-commitment/
-│   └── SKILL.md
-├── 07-experiment-design/
-│   └── SKILL.md
-├── 08-research-framing/
-│   └── SKILL.md
-└── workspace-presentation/
-    ├── SKILL.md
-    ├── references/
-    └── templates/
+└── skills/
+    ├── 01-field-map/
+    │   └── SKILL.md
+    ├── 02-research-question/
+    │   └── SKILL.md
+    ├── 03-problem-reality-check/
+    │   └── SKILL.md
+    ├── 04-theoretical-grounding/
+    │   └── SKILL.md
+    ├── 05-method-inspiration/
+    │   └── SKILL.md
+    ├── 06-method-commitment/
+    │   └── SKILL.md
+    ├── 07-experiment-design/
+    │   └── SKILL.md
+    ├── 08-research-framing/
+    │   └── SKILL.md
+    └── workspace-presentation/
+        ├── SKILL.md
+        ├── references/
+        └── templates/
 ```
 
 ---
