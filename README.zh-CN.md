@@ -2,11 +2,17 @@
 
 语言：[English](README.md) | 简体中文
 
-> 一个面向研究过程的 Codex skill 套件，把论文阅读转化为结构化的研究决策。
+[![skills.sh](https://skills.sh/b/snake-fan/Paper-Reading-Skills)](https://skills.sh/snake-fan/Paper-Reading-Skills)
 
-Paper Reading Skills 是一组面向科研早期阶段的 Codex skills。它的目标不是孤立地总结论文，而是帮助研究者在不同研究阶段中，围绕明确的阅读动机组织论文阅读，并把阅读结果沉淀为可以继续推进研究的持久产物。
+> 一个强调阶段性确认与人机共创的 Codex skill 套件，把论文阅读转化为结构化、可追溯的研究决策。
 
-很多低效阅读并不是因为论文太难，而是因为开始阅读前没有说清楚：
+Paper Reading Skills 是一组面向科研早期阶段的 Codex skills。它帮助研究者在不同研究阶段中，围绕明确的阅读动机组织论文阅读，并把阅读结果沉淀为可以继续推进研究的持久产物。
+
+Paper Reading Skills 的核心是阶段性确认：Agent 会提出研究边界、论文集合、候选问题、方法需求、close works、claims、风险和下一步建议；研究者需要在关键节点确认、修改、拒绝，或明确委托之后，workflow 才继续向下推进。最终目标是让研究者真正理解这个项目，并能认领下一步研究决策。
+
+在这个循环里，AI 负责扩展视野、结构化选项、挑战薄弱假设；研究者则在过程中学习项目、校准方向，并提供只有真正项目 owner 才能给出的判断。
+
+高效论文阅读开始于先说清楚这些问题：
 
 * 我为什么要读这些论文？
 * 我现在要解决哪个研究决策？
@@ -33,6 +39,19 @@ Paper Reading Skills 是一组面向科研早期阶段的 Codex skills。它的�
 
 ---
 
+## 这个项目和 Auto Research 有什么不同
+
+Paper Reading Skills 把研究看成一个协作式决策过程，而不是一次性内容生成任务。
+
+* 阶段性 gate 会把关键选择显性化：field boundary、seed papers、method needs、candidate methods、experiment claims、close works 和最终 commitment 都要先被 review，才能继续影响下游 workflow。
+* Agent 是主动的研究伙伴：它负责搜索、整理、比较、质疑和推荐，但不会把自己的推荐偷偷包装成研究者已经认领的结论。
+* 研究者始终在过程里：研究者一边被 AI 启发，一边修正 AI 的 framing，并在文献证据不足以自动判断的地方提供自己的研究判断。
+* 委托会被记录，而不是被伪装成确认。如果研究者要求更自动化的运行，未 review 的关键 gate 会让产物保持 provisional 状态。
+
+这套 workflow 追求的是研究 ownership。一个阶段结束时，研究者应该能够讲清楚当前边界、证据、风险、备选路线和下一步，而不是只拿到一份自己仍然不熟悉的漂亮文档。
+
+---
+
 ## Skill Map
 
 | 阶段 | Skill | 它帮助回答的研究问题 | 主要产出 |
@@ -46,6 +65,57 @@ Paper Reading Skills 是一组面向科研早期阶段的 Codex skills。它的�
 | 07 | Experiment Design | 如何把 claim 转化为可验证的实验设计？ | 实验计划 / baseline pressure matrix / claim-metric map |
 | 08 | Research Framing | 如何把当前研究放入论文叙事和相关工作比较中？ | 研究 framing 包 |
 | Extra | Workspace Presentation | 如何把已有研究 workspace 变成可浏览、可交接的界面？ | 交互式 presentation workspace |
+
+---
+
+## 产出方式
+
+Paper Reading Skills 会根据任务规模和复盘需求，生成不同形态的研究产物。下面的截图重点展示三种产出方式：大任务领域调研、过程级文档记录，以及完整流程可视化。
+
+### 大任务领域调研
+
+<p>
+  <img src="assets/fieldmap1.png" alt="Agent Safety Field Map report overview" width="49%">
+  <img src="assets/fieldmap2.png" alt="Field Map markdown preview modal" width="49%">
+</p>
+
+面对“进入一个新方向”这类范围大、边界模糊的阅读任务，Field Map Workflow 会把分散论文整理成可视化 HTML 报告。它把 Field Boundary、Seed Set、Search Strategy、Research Clusters、Paper Table、Research Opportunity Candidates 和 Next Actions 放进一个可浏览界面。
+
+这种方式的优势：
+
+* 支持从浅入深：用户可以先看覆盖数量、clusters 和 opportunities，再逐步钻进源笔记；
+* 把“大而散”的文献调研任务变成有边界、有路径的领域洞察过程；
+* 以零构建静态 HTML 交付，轻量、可打开、可分享。
+
+### 过程记录与决策追溯
+
+<p>
+  <img src="assets/candidate_method.png" alt="Candidate Methods table for Memory Provenance Firewall" width="100%">
+</p>
+
+各个 workflow 不只生成最终摘要，也会保留完整过程记录。上面的例子展示了方法阶段如何记录 source workspace、transfer mapping、Candidate Methods、Method Thesis、已覆盖和未覆盖的 Method Needs、source patterns、状态以及 weakest link。
+
+这种方式的优势：
+
+* 决策可追溯：后续读者能看到哪些选择被保留、推迟、拒绝，哪些地方仍然脆弱；
+* 中间推理不会消失在聊天历史里，而是沉淀成可复查的文档；
+* 阶段性确认记录会说明研究者在哪里同意、修改、委托或阻止了 agent 的建议；
+* 下游 workflow 可以继承 source links、未解决风险和决策状态，不必猜测结果是怎么来的。
+
+### 完整流程可视化
+
+<p>
+  <img src="assets/final_presentation1.png" alt="Workspace Presentation research state overview" width="49%">
+  <img src="assets/final_presentation2.png" alt="Workspace Presentation risks and source preview" width="49%">
+</p>
+
+当研究链条已经比较完整时，Workspace Presentation skill 可以生成复杂的交互式 React/Vite 网页，把整体研究流程可视化。它可以把 method design、experiment design、research framing、risks、source trace、next actions 和 source-file previews 连接到同一个可导航 workspace 中。
+
+这种方式的优势：
+
+* 一眼看到整体研究状态，同时保留回到源 artifacts 的链接；
+* 把多阶段研究过程变成适合交接、复读和项目 review 的网页界面；
+* 让 decisions、evidence、risks 和 next actions 同时可见，而不是散落在多个文件夹里。
 
 ---
 
@@ -186,6 +256,28 @@ skills/06-method-commitment
 
 ## 如何使用
 
+通过 open skills CLI 直接安装：
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills
+```
+
+安装前预览可用 skills：
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills --list
+```
+
+如果想把全部 skills 安装到 Codex 的全局 skills 目录：
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills --skill '*' -g -a codex
+```
+
+本仓库同时提供 `.claude-plugin/plugin.json`，兼容 Claude Code plugin manifest 生态的安装器可以显式发现同一组 skills。
+
+### 手动设置
+
 克隆仓库：
 
 ```bash
@@ -241,6 +333,7 @@ I want to identify major branches, representative papers, evaluation settings, s
 
 * 可追溯：重要 claims 应该能连接回论文或上游 artifacts。
 * 面向决策：每个 artifact 都应该帮助用户完成一个研究判断。
+* 参与式：重要 workflow gate 应该邀请研究者确认、修改、拒绝，或明确委托下一步。
 * 可复用：下游 skills 应该能够消费上游产出。
 * 有边界：每个 workflow 都应该有清晰的停止条件。
 * 诚实面对不确定性：薄弱证据、未解决风险和不安全 claims 都应该被明确记录。
@@ -259,7 +352,7 @@ I want to identify major branches, representative papers, evaluation settings, s
 
 ### 3. 人类拥有关键决策
 
-Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该始终对用户可见，并由用户认领。
+Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该始终对用户可见，并由研究者认领。Agent 的推荐不会自动变成 commitment，只有经过相关 gate 的确认或明确委托，才会进入下游。
 
 ### 4. 下游路由纪律
 
@@ -275,6 +368,14 @@ Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该�
 
 ```text
 .
+├── assets/
+│   ├── candidate_method.png
+│   ├── fieldmap1.png
+│   ├── fieldmap2.png
+│   ├── final_presentation1.png
+│   └── final_presentation2.png
+├── .claude-plugin/
+│   └── plugin.json
 ├── README.md
 ├── README.zh-CN.md
 └── skills/

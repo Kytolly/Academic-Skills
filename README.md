@@ -2,11 +2,17 @@
 
 Languages: English | [Chinese](README.zh-CN.md)
 
-> A research-oriented Codex skill suite that turns paper reading into structured research decisions.
+[![skills.sh](https://skills.sh/b/snake-fan/Paper-Reading-Skills)](https://skills.sh/snake-fan/Paper-Reading-Skills)
 
-Paper Reading Skills is a suite of Codex skills for early-stage research. Its goal is not to summarize papers in isolation, but to help researchers organize reading around a clear research motivation at each stage and turn reading results into durable artifacts that can support the next research move.
+> A human-in-the-loop Codex skill suite that turns paper reading into staged, auditable research decisions.
 
-A lot of inefficient reading happens not because papers are too hard, but because the reader has not clarified these questions before reading:
+Paper Reading Skills is a suite of Codex skills for early-stage research. It helps researchers organize paper reading around a clear research motivation at each stage and turn reading results into durable artifacts that can support the next research move.
+
+Paper Reading Skills is built around staged confirmation. The agent proposes boundaries, paper sets, candidate questions, method needs, close works, claims, risks, and next steps; the researcher confirms, revises, rejects, or explicitly delegates consequential decisions before the workflow moves on. The intended outcome is that the researcher understands the project deeply enough to own the next decision.
+
+In this loop, the agent broadens the search space, structures options, and challenges weak assumptions; the researcher learns the project, calibrates the direction, and supplies the judgments that only a human owner can make.
+
+Efficient paper reading starts by clarifying these questions before reading:
 
 * Why am I reading these papers?
 * Which research decision am I trying to make right now?
@@ -33,6 +39,19 @@ Each skill corresponds to a concrete research stage and produces artifacts that 
 
 ---
 
+## What Makes This Different
+
+Paper Reading Skills treats research as a collaborative decision process, not a fully automated content-generation task.
+
+* Stage gates keep important choices visible: field boundaries, seed papers, method needs, candidate methods, experiment claims, close works, and final commitments are reviewed before they drive downstream work.
+* The agent is an active research partner: it searches, structures, compares, challenges, and recommends, but it does not silently turn its own recommendation into the researcher's commitment.
+* The researcher stays inside the loop: they learn the project while making decisions, correct the agent's framing, and provide judgment where literature evidence alone is not enough.
+* Delegation is recorded rather than disguised as confirmation. If the researcher asks for a more automatic run, the output stays provisional where key gates were not reviewed.
+
+This is meant to create research ownership. By the end of a workflow, the researcher should be able to explain the boundary, evidence, risks, alternatives, and next move, rather than merely receive an impressive document about a topic they still do not know.
+
+---
+
 ## Skill Map
 
 | Stage | Skill | Research Question It Helps Answer | Main Output |
@@ -46,6 +65,57 @@ Each skill corresponds to a concrete research stage and produces artifacts that 
 | 07 | Experiment Design | How can claims be translated into verifiable experiment designs? | Experiment plan / baseline pressure matrix / claim-metric map |
 | 08 | Research Framing | How should this research be positioned in the paper narrative and related-work comparison? | Research framing package |
 | Extra | Workspace Presentation | How can an existing research workspace become a browsable, handoff-ready interface? | Interactive presentation workspace |
+
+---
+
+## Output Modes
+
+Paper Reading Skills is designed to produce research artifacts in different forms depending on the task scale and review need. The screenshots below show three output modes: large-task field investigation, process-level documentation, and full-workflow visualization.
+
+### Large-Task Field Investigation
+
+<p>
+  <img src="assets/fieldmap1.png" alt="Agent Safety Field Map report overview" width="49%">
+  <img src="assets/fieldmap2.png" alt="Field Map markdown preview modal" width="49%">
+</p>
+
+For broad research tasks such as entering a new field, the Field Map Workflow turns scattered papers into a visual HTML report. It organizes the Field Boundary, Seed Set, Search Strategy, Research Clusters, Paper Table, Research Opportunity Candidates, and Next Actions into a single browsable surface.
+
+This mode is useful because:
+
+* it supports shallow-to-deep reading: users can start from coverage counts, clusters, and opportunities, then drill into source notes;
+* it turns a large, fuzzy literature task into a structured investigation path;
+* it keeps the report lightweight and shareable through zero-build static HTML.
+
+### Process Records And Decision Trace
+
+<p>
+  <img src="assets/candidate_method.png" alt="Candidate Methods table for Memory Provenance Firewall" width="100%">
+</p>
+
+The workflows also produce full process records, not only polished summaries. The example above shows how method work is recorded with source workspace, transfer mapping, Candidate Methods, Method Thesis, covered and uncovered Method Needs, source patterns, status, and weakest link.
+
+This mode is useful because:
+
+* decisions remain auditable: later readers can see what was selected, deferred, rejected, or still fragile;
+* intermediate reasoning stays visible instead of disappearing into chat history;
+* staged confirmation records show where the researcher agreed, revised, delegated, or blocked a recommendation;
+* downstream workflows can inherit source links, open risks, and decision status without guessing how the result was produced.
+
+### Full-Workflow Visualization
+
+<p>
+  <img src="assets/final_presentation1.png" alt="Workspace Presentation research state overview" width="49%">
+  <img src="assets/final_presentation2.png" alt="Workspace Presentation risks and source preview" width="49%">
+</p>
+
+For mature research chains, the Workspace Presentation skill can generate a complex interactive React/Vite web interface that visualizes the whole research flow. It can connect method design, experiment design, research framing, risks, source trace, next actions, and source-file previews in one navigable workspace.
+
+This mode is useful because:
+
+* it makes the overall research state reviewable at a glance while preserving links back to source artifacts;
+* it turns a multi-stage research process into a presentation-quality interface for handoff, rereading, or project review;
+* it keeps decisions, evidence, risks, and next actions visible together instead of scattering them across folders.
 
 ---
 
@@ -186,6 +256,28 @@ Expected output:
 
 ## How to Use
 
+Install directly with the open skills CLI:
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills
+```
+
+To preview the skills before installing:
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills --list
+```
+
+For Codex specifically, install all skills globally with:
+
+```bash
+npx skills@latest add snake-fan/Paper-Reading-Skills --skill '*' -g -a codex
+```
+
+This repository also includes `.claude-plugin/plugin.json`, so installers compatible with the Claude Code plugin manifest ecosystem can discover the same skill set explicitly.
+
+### Manual Setup
+
 Clone the repository:
 
 ```bash
@@ -241,6 +333,7 @@ The outputs should be:
 
 * traceable: important claims should connect back to papers or prior artifacts;
 * decision-oriented: each artifact should help the user make a research decision;
+* participatory: major workflow gates should invite the researcher to confirm, revise, reject, or explicitly delegate the next move;
 * reusable: downstream skills should be able to consume upstream outputs;
 * bounded: each workflow should have clear stopping conditions;
 * honest about uncertainty: weak evidence, unresolved risks, and unsafe claims should be explicitly recorded.
@@ -259,7 +352,7 @@ Every skill writes structured artifacts so that research progress does not disap
 
 ### 3. Human-owned decisions
 
-The agent can propose, organize, attack, and summarize, but important research commitments should remain visible to the user.
+The agent can propose, organize, attack, and summarize, but important research commitments should remain visible to the user and owned by the researcher. A recommendation is not treated as a commitment until the relevant gate is confirmed or explicitly delegated.
 
 ### 4. Downstream routing discipline
 
@@ -275,6 +368,14 @@ The project avoids turning weak evidence into strong claims. It records what can
 
 ```text
 .
+├── assets/
+│   ├── candidate_method.png
+│   ├── fieldmap1.png
+│   ├── fieldmap2.png
+│   ├── final_presentation1.png
+│   └── final_presentation2.png
+├── .claude-plugin/
+│   └── plugin.json
 ├── README.md
 ├── README.zh-CN.md
 └── skills/
