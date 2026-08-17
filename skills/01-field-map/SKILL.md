@@ -88,6 +88,10 @@ Before reading seed papers, present the proposed Seed Set with a short reason fo
 
 Use Position-Oriented Reading. Read only deeply enough to complete the Paper Position Record and place the paper in the field.
 
+When an original figure or table materially supports the Paper Position Record, follow `docs/agents/paper-visual-evidence.md`: render and visually inspect a PDF screenshot or crop, store it directly under the Field Map Workspace's `assets/` directory with a paper-prefixed filename, and embed it with a resolvable relative path. Keep captions content-focused and omit screenshot-source wording.
+
+Use `docs/agents/markdown-math.md` for formulas in all generated Markdown: `$...$` inline and `$$...$$` display only. Do not copy `\(...\)` or `\[...\]` delimiters from papers.
+
 Default reading order:
 
 1. Title / Abstract / Introduction

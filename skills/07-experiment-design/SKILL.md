@@ -47,6 +47,12 @@ Use `references/workspace-structure.md` for the artifact layout.
 
 If an experiment folder already exists, read the current artifacts first. Preserve user edits and update existing files instead of overwriting them blindly.
 
+## Paper Visual Evidence
+
+When an original paper figure or table materially explains a benchmark protocol, baseline, metric, ablation, or human-evaluation instrument, embed a PDF crop in the relevant artifact using `docs/agents/paper-visual-evidence.md`. Preserve page and figure/table provenance and use a relative link so the Markdown package remains portable.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Interaction Rules
 
 This is a stepwise workflow, not a one-shot artifact generator. Ask one bounded decision packet at a time, provide the recommended answer, wait for the user's confirmation, revision, or explicit delegation, then update the relevant artifact before moving to dependent decisions.

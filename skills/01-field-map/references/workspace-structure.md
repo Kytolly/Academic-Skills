@@ -13,6 +13,10 @@ Create one workspace per research direction:
 └── index.html
 ```
 
+## Paper Visual Evidence Assets
+
+Keep every original-paper figure and table capture directly under `assets/`. Prefix filenames with the paper slug, such as `reactivegwm-fig-03-action-module.png`, to avoid collisions. Paper Markdown records must reference them with relative links. Do not create asset subdirectories or add screenshot-source wording to notebook captions.
+
 ## Slug Rules
 
 Use a concise lowercase slug derived from the confirmed Field Boundary.

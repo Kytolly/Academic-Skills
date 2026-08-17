@@ -50,6 +50,12 @@ Use `references/workspace-structure.md` for the artifact layout and status-speci
 
 If the workflow is resumed, read existing artifacts before editing. Preserve user edits and update existing files instead of overwriting them blindly.
 
+## Paper Visual Evidence
+
+If a source method's architecture, lifecycle, or component comparison is materially supported by an original figure or table, preserve it in the commitment workspace using `docs/agents/paper-visual-evidence.md`. Cite it with a relative path and keep the agent's reconstruction or critique distinct from the source visual.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Source Method
 
 Method Commitment starts from exactly one Source Method bound to exactly one Method Commitment Source Problem.

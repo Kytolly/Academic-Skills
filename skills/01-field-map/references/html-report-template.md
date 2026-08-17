@@ -19,7 +19,7 @@ Create a zero-build static `index.html` inside the Field Map Workspace. It must 
 - Inline CSS is acceptable.
 - Add an inline, no-dependency Markdown preview overlay that intercepts local `.md` links, fetches the Markdown file, renders it in a full-screen readable card, and closes via a visible close button, backdrop click, or Escape.
 - Keep each Markdown link's original relative `href` so the report degrades to normal navigation if JavaScript or local file reads are unavailable.
-- The Markdown preview renderer must handle headings, paragraphs, unordered and ordered lists, blockquotes, fenced code, inline code, links, and simple pipe tables.
+- The Markdown preview renderer must handle headings, paragraphs, unordered and ordered lists, blockquotes, fenced code, inline code, links, images with relative paths, and simple pipe tables.
 - Keep the report readable and printable.
 - Use tables for paper lists and opportunity summaries.
 - Use anchor links for navigation.

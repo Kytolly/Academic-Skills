@@ -588,6 +588,22 @@ _Avoid_: Source artifact rewrite, free-floating summary, strict parser output
 A lightweight confirmation step before generating a Workspace Presentation, fixing exactly one source workspace or source chain, the presentation slug, detected workflow coverage, output path, update mode, and major display modules.
 _Avoid_: Research workflow gate, broad workspace scan, accidental presentation source
 
+**Paper Visual Evidence**:
+A source-linked crop or page screenshot of an original paper figure or table, stored inside the source workspace and referenced from Markdown with a relative path so the note and asset can migrate together.
+_Avoid_: Agent-created illustration, pasted base64 image, absolute machine path, unsupported decorative screenshot
+
+**Research Notebook**:
+A portable, evidence-linked Markdown reading artifact for exactly one paper, combining structured interpretation with selected Paper Visual Evidence while keeping paper claims, agent interpretation, and user notes distinct.
+_Avoid_: Field map paper record, section-by-section abstract, loose chat summary, full-paper screenshot archive
+
+**Research Notebook Folder**:
+The movable directory containing one `notebook.md`, one `source.md`, and locally referenced figure and table assets for exactly one paper.
+_Avoid_: Standalone Markdown with broken external images, multi-paper workspace, source PDF copy by default
+
+**Markdown Math Delimiters**:
+The repository-wide formula convention for generated Markdown: `$...$` for inline mathematics and `$$...$$` for display mathematics, with `\(...\)` and `\[...\]` prohibited.
+_Avoid_: Mixed delimiter styles, raw TeX display environments, unrenderable formula syntax
+
 ## Example Dialogue
 
 Dev: "Should `field map` just output `research_clusters.md`?"

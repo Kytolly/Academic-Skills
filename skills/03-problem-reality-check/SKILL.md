@@ -37,6 +37,12 @@ Set `{workspace-root}` before creating, scanning, or updating artifacts:
 15. Write or update `problem_reality_checks.md`.
 16. Stop after one card has a completed Interrogation Transcript and Problem Reality Check Report.
 
+## Paper Visual Evidence
+
+If a figure or table is needed to substantiate a Problem Reality Check answer or unsafe-motivation finding, embed the original PDF crop as Paper Visual Evidence. Follow `docs/agents/paper-visual-evidence.md`; keep the link relative and distinguish the source visual from the agent's interpretation.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 If the user asks to check multiple cards, ask them to choose one card for the current run. Do not run multiple card interrogations in one workflow pass.
 
 ## Source Card Gate

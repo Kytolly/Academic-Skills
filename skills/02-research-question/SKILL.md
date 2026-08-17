@@ -36,6 +36,12 @@ Set `{workspace-root}` before creating, scanning, or updating artifacts:
 
 If a Research Question Workspace already exists, read its current artifacts before continuing. Preserve user edits and update the existing files instead of overwriting them blindly.
 
+## Paper Visual Evidence
+
+When a source paper figure or table materially supports a Candidate Angle, Supporting Evidence record, or Research Question Card, preserve or add it using `docs/agents/paper-visual-evidence.md`. Use a relative Markdown link to the workspace asset and record the paper, page, figure/table number, and the claim it supports.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Source Field Map Gate
 
 The Research Question Workflow must be derived from exactly one Field Map Workspace.

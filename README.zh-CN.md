@@ -64,6 +64,7 @@ Paper Reading Skills 把研究看成一个协作式决策过程，而不是一�
 | 06 | Method Commitment | 当前方法是否足够稳定，能否被研究者认领？ | committed / provisional / redesign / rejected 方法结果 |
 | 07 | Experiment Design | 如何把 claim 转化为可验证的实验设计？ | 实验计划 / baseline pressure matrix / claim-metric map |
 | 08 | Research Framing | 如何把当前研究放入论文叙事和相关工作比较中？ | 研究 framing 包 |
+| 工具 | Research Notebook | 如何把单篇论文变成带原始图表证据、可迁移的 Markdown 笔记？ | 论文笔记 / 来源记录 / 原论文图表截图 |
 | Extra | Workspace Presentation | 如何把已有研究 workspace 变成可浏览、可交接的界面？ | 交互式 presentation workspace |
 
 ---
@@ -297,6 +298,7 @@ skills/
 ├── 06-method-commitment/
 ├── 07-experiment-design/
 ├── 08-research-framing/
+├── research-notebook/
 └── workspace-presentation/
 ```
 
@@ -395,6 +397,11 @@ Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该�
     │   └── SKILL.md
     ├── 08-research-framing/
     │   └── SKILL.md
+    ├── research-notebook/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── references/
+    │   └── scripts/
     └── workspace-presentation/
         ├── SKILL.md
         ├── references/
@@ -416,6 +423,7 @@ Agent 可以提出、组织、质疑和总结，但重要的研究承诺应该�
 * method commitment workflow
 * experiment design workflow
 * research framing workflow
+* portable single-paper research notebook workflow
 * workspace presentation workflow
 
 进行中：

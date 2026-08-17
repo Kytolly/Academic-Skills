@@ -64,6 +64,7 @@ This is meant to create research ownership. By the end of a workflow, the resear
 | 06 | Method Commitment | Is the current method stable enough for the researcher to own? | Committed / provisional / redesign / rejected method outcome |
 | 07 | Experiment Design | How can claims be translated into verifiable experiment designs? | Experiment plan / baseline pressure matrix / claim-metric map |
 | 08 | Research Framing | How should this research be positioned in the paper narrative and related-work comparison? | Research framing package |
+| Utility | Research Notebook | How can one paper become a portable, evidence-linked Markdown note? | Notebook / source record / original figure and table captures |
 | Extra | Workspace Presentation | How can an existing research workspace become a browsable, handoff-ready interface? | Interactive presentation workspace |
 
 ---
@@ -297,6 +298,7 @@ skills/
 ├── 06-method-commitment/
 ├── 07-experiment-design/
 ├── 08-research-framing/
+├── research-notebook/
 └── workspace-presentation/
 ```
 
@@ -395,6 +397,11 @@ The project avoids turning weak evidence into strong claims. It records what can
     │   └── SKILL.md
     ├── 08-research-framing/
     │   └── SKILL.md
+    ├── research-notebook/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── references/
+    │   └── scripts/
     └── workspace-presentation/
         ├── SKILL.md
         ├── references/
@@ -416,6 +423,7 @@ Completed:
 * method commitment workflow
 * experiment design workflow
 * research framing workflow
+* portable single-paper research notebook workflow
 * workspace presentation workflow
 
 In progress:

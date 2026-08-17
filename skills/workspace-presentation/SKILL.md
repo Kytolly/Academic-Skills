@@ -31,6 +31,8 @@ Set `{workspace-root}` before creating or updating a presentation:
 9. Write one source-linked `public/generated-summaries/{module-id}.json` per presentation module.
 10. Stop with the local run commands. Do not run `npm install` or `npm run dev` unless the user explicitly asks.
 
+When source Markdown contains Paper Visual Evidence, keep the relative image references intact and include the corresponding workspace asset files in the presentation's source index. The presentation must resolve and display those images from the source workspace; it must not replace them with copied, base64-embedded, or agent-redrawn visuals.
+
 ## Presentation Source Gate
 
 Before generating files, show a compact source packet:

@@ -42,6 +42,12 @@ Set `{workspace-root}` before creating, scanning, or updating artifacts:
 
 If a Theoretical Grounding Workspace already exists, read its current artifacts before continuing. Preserve user edits and update existing files instead of overwriting them blindly.
 
+## Paper Visual Evidence
+
+When a source paper figure or table clarifies a theory-bearing mechanism, construct, or boundary, embed it in the relevant grounding artifact using `docs/agents/paper-visual-evidence.md`. Preserve relative paths and provenance; do not use visuals as decorative theory support.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Source Problem Gate
 
 The workflow must be routed to exactly one Research Question Card and its completed Problem Reality Check Report.

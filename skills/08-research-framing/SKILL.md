@@ -40,6 +40,12 @@ Set `{workspace-root}` before creating, scanning, or updating artifacts:
 14. Write `research_framing_package.md` as either a final Research Framing Package or a Provisional Framing Sketch according to source status.
 15. Stop when the user can state the paper story, name the closest works, explain the difference from each, and support or safely downgrade the main paper-facing claims.
 
+## Paper Visual Evidence
+
+When a close work's figure or table materially supports positioning, evaluation comparison, or a writing claim, embed the original PDF crop according to `docs/agents/paper-visual-evidence.md`. Keep the source visual, citation/provenance, and the user's interpretation distinct; use only relative links.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Framing Boundary
 
 Research Framing is a writing-facing comparison workflow. It does not invent a new research problem, commit a method, or design experiments.

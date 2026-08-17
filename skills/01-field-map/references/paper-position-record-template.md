@@ -36,6 +36,12 @@ Output:
 
 How is the paper evaluated? Include datasets, benchmarks, baselines, metrics, user studies, ablations, or theoretical criteria when available.
 
+## Paper Visual Evidence
+
+Include only figures or tables that materially support the position record. Store them directly under the workspace `assets/` directory and use content-focused captions without screenshot-source wording.
+
+![{Figure or table number and content-focused caption}](../assets/{paper-slug}-{figure-or-table}-{number}-{short-label}.png)
+
 ## Contribution Type
 
 Choose one or more:

@@ -20,6 +20,17 @@
       "displayCategory": "summarize-then-link",
       "exists": true
     }
+  ],
+  "assets": [
+    {
+      "id": "paper-figure-2",
+      "label": "fig-2-memory-lifecycle.png",
+      "path": "/absolute/path/to/assets/example-paper-fig-2-memory-lifecycle.png",
+      "relativePath": "assets/example-paper-fig-2-memory-lifecycle.png",
+      "readUrl": "/@fs//absolute/path/to/assets/example-paper-fig-2-memory-lifecycle.png",
+      "kind": "paper-visual-evidence",
+      "exists": true
+    }
   ]
 }
 ```
@@ -29,6 +40,7 @@
 - `schemaVersion`: currently `1`.
 - `sourceRoot`: absolute path to the selected source workspace or chain root.
 - `files`: source files that may be shown, summarized, linked, or previewed.
+- `assets`: optional source assets referenced by Markdown, including Paper Visual Evidence image files.
 
 Each file needs:
 
@@ -40,6 +52,8 @@ Each file needs:
 - `workflow`: detected workflow type.
 - `displayCategory`: `primary-display`, `summarize-then-link`, or `link-only`.
 - `exists`: whether the file was present during generation.
+
+Each asset needs `id`, `label`, `path`, `relativePath`, `readUrl`, `kind`, and `exists`. Use `kind: "paper-visual-evidence"` for original-paper figure or table captures. Include every referenced image so presentation generation can verify that Markdown links resolve.
 
 ## Vite File Serving
 

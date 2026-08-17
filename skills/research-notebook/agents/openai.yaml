@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Notebook"
+  short_description: "Create portable paper notes with source figures"
+  default_prompt: "Use $research-notebook to turn this paper PDF into a portable Markdown research note with selected source figures and tables."

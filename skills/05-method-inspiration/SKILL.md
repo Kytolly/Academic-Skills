@@ -41,6 +41,12 @@ Set `{workspace-root}` before creating, scanning, or updating artifacts:
 
 If a Method Inspiration Workspace already exists, read its current artifacts before continuing. Preserve user edits and update existing files instead of overwriting them blindly.
 
+## Paper Visual Evidence
+
+For a Method Pattern or Transfer Mapping whose mechanism is materially clearer in the source paper's figure or table, capture and embed that visual according to `docs/agents/paper-visual-evidence.md`. Keep the original caption/labels, use a relative link, and record the transfer interpretation separately from the source evidence.
+
+Use `docs/agents/markdown-math.md` for formulas in generated Markdown: `$...$` inline and `$$...$$` display only; never use `\(...\)` or `\[...\]`.
+
 ## Method Inspiration Boundary
 
 Method Inspiration stops at auditable Candidate Methods.
